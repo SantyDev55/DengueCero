@@ -69,11 +69,61 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   ];
 
-  const quizQuestions = [
-    { question: 'El zancudo que transmite el dengue puede reproducirse en recipientes con agua acumulada.', correct: true, explanation: 'Verdadero. Tanques, floreros, baldes, llantas y otros objetos que retienen agua pueden convertirse en criaderos.' },
-    { question: 'Para prevenir el dengue, los floreros deben conservar agua limpia todo el tiempo.', correct: false, explanation: 'Falso. El Minsa recomienda reemplazar el agua de los floreros por arena húmeda o esponja floral y mantener limpio el recipiente.' },
-    { question: 'Si una persona presenta señales de alarma, debe esperar a ver si mejora al día siguiente.', correct: false, explanation: 'Falso. Dolor abdominal intenso y persistente, vómitos persistentes, sangrado o somnolencia requieren atención médica inmediata.' }
+const quizBank = [
+    { question: "El dengue se transmite principalmente por la picadura de un mosquito infectado.", correct: true, explanation: "Verdadero. La vía habitual de transmisión es la picadura de un mosquito Aedes infectado." },
+    { question: "El dengue se transmite normalmente por abrazar o compartir cubiertos con una persona enferma.", correct: false, explanation: "Falso. El dengue no se transmite por el contacto cotidiano; se transmite principalmente mediante mosquitos infectados." },
+    { question: "El mosquito que transmite el dengue puede reproducirse en recipientes que acumulan agua.", correct: true, explanation: "Verdadero. Tanques, baldes, floreros y otros recipientes que retienen agua pueden convertirse en criaderos." },
+    { question: "El mosquito solo se reproduce en agua sucia; el agua limpia no representa riesgo.", correct: false, explanation: "Falso. También puede reproducirse en agua almacenada limpia si el recipiente permite el desarrollo de sus larvas." },
+    { question: "Una tapa, botella o recipiente pequeño que acumule agua puede convertirse en un criadero.", correct: true, explanation: "Verdadero. No solo importan los recipientes grandes: pequeños objetos que retienen agua también pueden ser criaderos." },
+    { question: "Si el agua de un tanque se ve limpia, no hace falta taparlo.", correct: false, explanation: "Falso. Los depósitos de agua deben mantenerse bien tapados para evitar que los mosquitos entren y pongan huevos." },
+    { question: "Los recipientes para almacenar agua deben mantenerse tapados y limpiarse con regularidad.", correct: true, explanation: "Verdadero. El Minsa recomienda lavar y escobillar los recipientes y mantenerlos bien tapados; sigue las indicaciones sanitarias vigentes." },
+    { question: "Basta con revisar el patio: dentro de la casa no existen posibles criaderos.", correct: false, explanation: "Falso. También hay que revisar el interior, la cocina, el baño, los floreros y las bandejas que puedan acumular agua." },
+    { question: "Para los floreros, el Minsa recomienda considerar arena húmeda o esponja floral en lugar de mantener agua.", correct: true, explanation: "Verdadero. Esta medida evita dejar agua estancada en el florero; limpia el recipiente antes de volver a usarlo." },
+    { question: "Los bebederos de mascotas no necesitan limpieza si el agua parece transparente.", correct: false, explanation: "Falso. Conviene renovar el agua y limpiar el recipiente con regularidad." },
+    { question: "Llantas, latas, botellas y juguetes olvidados pueden acumular agua y convertirse en criaderos.", correct: true, explanation: "Verdadero. Retira el agua acumulada y guarda, reutiliza o desecha estos objetos de forma adecuada." },
+    { question: "La bandeja detrás o debajo de una refrigeradora nunca puede acumular agua.", correct: false, explanation: "Falso. El Minsa incluye bandejas detrás de refrigeradoras entre los lugares que conviene revisar, siempre de forma segura." },
+    { question: "Vaciar y limpiar recipientes que acumulan agua ayuda a eliminar posibles criaderos.", correct: true, explanation: "Verdadero. Después de vaciar el agua, limpia las paredes del recipiente y evita que vuelva a acumularse." },
+    { question: "Después de limpiar la vivienda una sola vez, ya no es necesario volver a revisarla.", correct: false, explanation: "Falso. La inspección debe repetirse con regularidad porque los objetos pueden volver a acumular agua." },
+    { question: "Durante una revisión conviene mirar también objetos pequeños que puedan retener agua.", correct: true, explanation: "Verdadero. Tapas, envases pequeños, juguetes y otros objetos pueden acumular agua." },
+    { question: "Solo los recipientes muy grandes pueden convertirse en criaderos de mosquitos.", correct: false, explanation: "Falso. También pueden servir recipientes pequeños si retienen agua y permiten que el mosquito se reproduzca." },
+    { question: "Mantener bien tapados los depósitos de agua ayuda a impedir que los mosquitos accedan a ellos.", correct: true, explanation: "Verdadero. Usa una tapa que cierre bien y revisa que no queden aberturas." },
+    { question: "Conviene dejar baldes y cilindros destapados aunque contengan agua almacenada.", correct: false, explanation: "Falso. Los recipientes que almacenan agua deben permanecer bien tapados." },
+    { question: "Las lluvias y el almacenamiento inadecuado de agua pueden favorecer la aparición de criaderos.", correct: true, explanation: "Verdadero. El agua acumulada en recipientes y objetos facilita la reproducción del mosquito." },
+    { question: "Si no ves mosquitos o el clima está más fresco, nunca hace falta revisar la casa.", correct: false, explanation: "Falso. La prevención y la eliminación de criaderos deben mantenerse; no te guíes solo por si ves mosquitos." },
+    { question: "El mosquito que transmite el dengue suele estar activo durante el día.", correct: true, explanation: "Verdadero. La OMS señala que los mosquitos transmisores del dengue están activos durante el día." },
+    { question: "Solo hace falta protegerse de las picaduras mientras se duerme de noche.", correct: false, explanation: "Falso. Como el mosquito está activo durante el día, conviene reducir las picaduras también durante las actividades diurnas." },
+    { question: "La ropa que cubre la piel y un repelente usado según la etiqueta pueden ayudar a reducir las picaduras.", correct: true, explanation: "Verdadero. La OMS recomienda ropa que cubra la piel y repelentes adecuados usados de acuerdo con sus instrucciones." },
+    { question: "Usar repelente permite descuidar la eliminación de criaderos.", correct: false, explanation: "Falso. Prevenir las picaduras es complementario a eliminar los lugares donde el mosquito puede reproducirse." },
+    { question: "Las mallas o mosquiteros en ventanas pueden ayudar a evitar que entren mosquitos.", correct: true, explanation: "Verdadero. Las barreras físicas pueden reducir la entrada de mosquitos en la vivienda." },
+    { question: "La fumigación por sí sola elimina para siempre todos los posibles criaderos.", correct: false, explanation: "Falso. La prevención requiere eliminar o controlar los recipientes con agua y mantener las medidas de forma continua." },
+    { question: "Desechar correctamente residuos que puedan retener agua forma parte de la prevención.", correct: true, explanation: "Verdadero. Retirar residuos y objetos que acumulen agua ayuda a reducir los lugares de reproducción." },
+    { question: "La prevención del dengue depende únicamente de las autoridades; las familias no pueden ayudar.", correct: false, explanation: "Falso. Las acciones domésticas y comunitarias complementan las intervenciones sanitarias." },
+    { question: "Entre los síntomas frecuentes del dengue pueden estar fiebre, dolor de cabeza y dolores musculares.", correct: true, explanation: "Verdadero. También pueden aparecer dolor detrás de los ojos, náuseas o sarpullido." },
+    { question: "Todas las personas que contraen dengue presentan síntomas evidentes.", correct: false, explanation: "Falso. Algunas infecciones no presentan síntomas o producen síntomas leves." },
+    { question: "El dolor detrás de los ojos puede aparecer entre los síntomas del dengue.", correct: true, explanation: "Verdadero. Es uno de los síntomas descritos por la Organización Mundial de la Salud." },
+    { question: "Un sarpullido nunca puede estar relacionado con el dengue.", correct: false, explanation: "Falso. El sarpullido puede aparecer en algunas personas con dengue." },
+    { question: "Los síntomas pueden comenzar varios días después de la infección, no necesariamente en el momento de la picadura.", correct: true, explanation: "Verdadero. La OMS indica que, cuando aparecen, suelen comenzar entre 4 y 10 días después de la infección." },
+    { question: "Si la fiebre disminuye, es imposible que aparezcan señales de alarma.", correct: false, explanation: "Falso. Algunas señales de dengue grave pueden presentarse cuando la fiebre desaparece o disminuye." },
+    { question: "El dolor abdominal intenso y persistente es una señal de alarma.", correct: true, explanation: "Verdadero. Busca atención médica inmediata si aparece esta señal." },
+    { question: "Los vómitos persistentes nunca son una señal de alarma.", correct: false, explanation: "Falso. Los vómitos persistentes son una señal de alarma y requieren atención médica inmediata." },
+    { question: "El sangrado de encías o nariz puede ser una señal de alarma.", correct: true, explanation: "Verdadero. Cualquier señal de sangrado ante sospecha de dengue requiere valoración médica urgente." },
+    { question: "Ante una señal de alarma, lo correcto es esperar hasta el día siguiente para ver qué pasa.", correct: false, explanation: "Falso. Busca atención médica inmediata; no esperes a que los síntomas empeoren." },
+    { question: "La respiración acelerada, la debilidad intensa o la piel fría y pálida pueden ser señales graves.", correct: true, explanation: "Verdadero. La OMS las incluye entre las manifestaciones que requieren atención inmediata." },
+    { question: "Ante la sospecha de dengue, se debe buscar orientación sanitaria y evitar la automedicación.", correct: true, explanation: "Verdadero. Consulta a un profesional de salud y no tomes medicamentos por cuenta propia." },
+    { question: "La aspirina o el ibuprofeno son siempre recomendados para cualquier persona con sospecha de dengue.", correct: false, explanation: "Falso. La OMS aconseja evitar aspirina e ibuprofeno ante el dengue porque pueden aumentar el riesgo de sangrado. Sigue la indicación de un profesional de salud." },
+    { question: "Existe un antiviral específico que cura todos los casos de dengue.", correct: false, explanation: "Falso. No existe un tratamiento antiviral específico para el dengue; la atención clínica y la detección de señales de alarma son importantes." },
+    { question: "Descansar y beber suficientes líquidos son medidas generales de cuidado, pero no sustituyen la evaluación médica.", correct: true, explanation: "Verdadero. Si sospechas dengue, busca orientación sanitaria y solicita atención inmediata ante señales de alarma." },
+    { question: "Haber tenido dengue una vez garantiza que nunca volverás a contraerlo.", correct: false, explanation: "Falso. Existen distintos tipos de virus del dengue y una infección previa no protege contra todos ellos." },
+    { question: "El dengue puede ser grave, por lo que las señales de alarma requieren atención médica inmediata.", correct: true, explanation: "Verdadero. La atención oportuna ayuda a tratar las complicaciones." },
+    { question: "Todos los consejos sobre dengue que circulan por redes sociales son confiables.", correct: false, explanation: "Falso. Comprueba la información en el Minsa, la OMS u otras fuentes sanitarias oficiales." },
+    { question: "Una página web puede confirmar un diagnóstico de dengue solo con preguntar por los síntomas.", correct: false, explanation: "Falso. Una web educativa no puede diagnosticar; el diagnóstico y la atención corresponden a profesionales de salud." },
+    { question: "Una inspección preventiva registra observaciones del hogar, pero no diagnostica la enfermedad.", correct: true, explanation: "Verdadero. La inspección ayuda a reconocer posibles criaderos; no determina si una persona tiene dengue." },
+    { question: "Marcar toda la lista como revisada certifica que la vivienda está completamente libre de mosquitos.", correct: false, explanation: "Falso. El registro refleja lo que declaró el usuario y no es una certificación sanitaria ni garantiza ausencia de mosquitos." },
+    { question: "Compartir recomendaciones verificadas con la familia y el colegio puede ayudar a fortalecer la prevención.", correct: true, explanation: "Verdadero. La educación y la participación comunitaria complementan las medidas domésticas y sanitarias." }
   ];
+  let quizQuestions = [];
+  let previousQuizRound = [];
+  const QUIZ_SIZE = 5;
 
   const defaultAnswers = () => {
     const output = {};
@@ -419,12 +469,36 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Reto educativo: tres preguntas, respuesta explicada y puntuación local.
+  // Reto educativo: cinco preguntas aleatorias de un banco de 50, con explicación inmediata.
   let quizIndex = 0;
   let quizScore = 0;
   let quizAnswered = false;
   let quizFinished = false;
   const quizOptions = $('#quiz-options');
+  function shuffleQuizItems(items) {
+    const shuffled = [...items];
+    for (let i = shuffled.length - 1; i > 0; i -= 1) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
+  function selectQuizRound() {
+    // Evita repetir las cinco preguntas de la ronda inmediatamente anterior.
+    const freshPool = quizBank.filter(question => !previousQuizRound.includes(question));
+    const pool = freshPool.length >= QUIZ_SIZE ? freshPool : quizBank;
+    const selected = shuffleQuizItems(pool).slice(0, QUIZ_SIZE);
+    previousQuizRound = selected;
+    quizQuestions = selected;
+  }
+  function startQuizRound() {
+    selectQuizRound();
+    quizIndex = 0;
+    quizScore = 0;
+    quizAnswered = false;
+    quizFinished = false;
+    renderQuiz();
+  }
   function renderQuiz() {
     const nextButton = $('#quiz-next');
     const feedback = $('#quiz-feedback');
@@ -475,14 +549,14 @@ document.addEventListener("DOMContentLoaded", function () {
     if (quizIndex < quizQuestions.length - 1) { quizIndex += 1; quizAnswered = false; renderQuiz(); }
     else { quizFinished = true; renderQuiz(); }
   });
-  $('#quiz-restart').addEventListener('click', () => { quizIndex = 0; quizScore = 0; quizAnswered = false; quizFinished = false; renderQuiz(); });
+  $('#quiz-restart').addEventListener('click', startQuizRound);
 
   // Inicialización: recuperar borrador e historial si el navegador lo permite.
   answers = normalizeAnswers(parseJSON(safeGet(DRAFT_KEY), null));
   history = loadHistory();
   renderInspection();
   renderHistory();
-  renderQuiz();
+  startQuizRound();
 })();
 
 });
@@ -631,13 +705,13 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
         <div class="info-callout"><div class="callout-symbol">i</div><div><strong>Orientación sanitaria en Perú</strong><p>El Minsa ofrece orientación gratuita a través de la Línea 113, opción 1. Confirma los canales vigentes en la web oficial.</p><a href="https://www.gob.pe/113" target="_blank" rel="noopener noreferrer">Consultar información de la Línea 113 ↗</a></div></div>
         <div class="quiz-wrap">
-          <div class="quiz-heading"><div class="eyebrow">PON A PRUEBA LO QUE APRENDISTE</div><h2>Mitos y verdades</h2><p>Responde estas tres preguntas rápidas y revisa la explicación.</p></div>
+          <div class="quiz-heading"><div class="eyebrow">PON A PRUEBA LO QUE APRENDISTE</div><h2>Mitos y verdades</h2><p>Responde 5 preguntas aleatorias de un banco de 50. Cada respuesta incluye una explicación.</p></div>
           <div class="quiz-card" id="quiz-card">
-            <div class="quiz-progress"><span id="quiz-step">PREGUNTA 1 DE 3</span><span id="quiz-score-label">0 correctas</span></div>
+            <div class="quiz-progress"><span id="quiz-step">PREGUNTA 1 DE 5</span><span id="quiz-score-label">0 correctas</span></div>
             <h3 id="quiz-question">El zancudo que transmite el dengue puede reproducirse en recipientes con agua acumulada.</h3>
             <div class="quiz-options" id="quiz-options"><button type="button" data-answer="true">Verdadero</button><button type="button" data-answer="false">Falso</button></div>
             <div class="quiz-feedback" id="quiz-feedback" role="status" hidden></div>
-            <div class="quiz-controls"><button class="button button-quiet" id="quiz-restart" type="button">Reiniciar</button><button class="button button-primary" id="quiz-next" type="button" disabled>Siguiente pregunta →</button></div>
+            <div class="quiz-controls"><button class="button button-quiet" id="quiz-restart" type="button">Reiniciar · otras 5</button><button class="button button-primary" id="quiz-next" type="button" disabled>Siguiente pregunta →</button></div>
           </div>
         </div>
       </div>

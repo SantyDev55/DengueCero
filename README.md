@@ -21,7 +21,7 @@ La web es estática. Puedes publicar la carpeta en GitHub Pages, Netlify, Cloudf
 - Recomendaciones específicas y registro local de acciones declaradas como realizadas.
 - Progreso, resultados, historial e informe imprimible/guardable en PDF.
 - Compartir resumen y descargar un recordatorio de calendario (`.ics`).
-- Información educativa, señales de alarma y reto de mitos y verdades.
+- Información educativa, señales de alarma y reto de mitos y verdades con banco de 50 preguntas; cada ronda selecciona cinco al azar y muestra una explicación por respuesta.
 - Diseño adaptable, navegación por teclado y soporte para preferencia de movimiento reducido.
 
 ## Límites
