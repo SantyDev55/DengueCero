@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123b35">
+  <meta name="description" content="DengueCero te guía para revisar tu hogar, identificar posibles criaderos del zancudo y registrar acciones preventivas en 10 minutos.">
+  <title>DengueCero — La prevención comienza en casa</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23123b35'/%3E%3Cpath d='M50 17 77 28v20c0 18-12 29-27 36C35 77 23 66 23 48V28z' fill='%23d7f36a'/%3E%3Cpath d='m36 49 9 9 20-22' fill='none' stroke='%23123b35' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <style>
+:root{--forest:#123b35;--forest-2:#1a554b;--mint:#9bddd0;--lime:#d7f36a;--paper:#f7f6ef;--white:#fffdf7;--ink:#17332e;--muted:#65736e;--line:#dfe5d9;--coral:#ee8468;--peach:#ffe1d4;--green-pale:#e3f4ed;--shadow:0 18px 55px rgba(18,59,53,.09);--radius:24px;--font:'DM Sans',Arial,sans-serif;--display:'Manrope','DM Sans',Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;background:var(--white);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}body.menu-open{overflow:hidden}button,input,textarea{font:inherit}button,a{-webkit-tap-highlight-color:transparent}a{color:inherit;text-decoration:none}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #e79a48;outline-offset:3px}.container{width:min(1160px,calc(100% - 44px));margin-inline:auto}.section-pad{padding:96px 0}.skip-link{position:fixed;top:-80px;left:12px;z-index:1000;background:var(--lime);padding:10px 16px;border-radius:8px;font-weight:700}.skip-link:focus{top:12px}.site-header{height:82px;position:sticky;top:0;z-index:100;background:rgba(255,253,247,.93);backdrop-filter:blur(18px);border-bottom:1px solid rgba(18,59,53,.08)}.header-inner{height:100%;display:flex;align-items:center;justify-content:space-between}.brand{display:inline-flex;align-items:center;gap:10px;flex-shrink:0}.brand-mark{width:42px;height:42px;border-radius:14px;background:var(--lime);color:var(--forest);display:grid;place-items:center}.brand-mark svg{width:32px;height:32px}.brand-name{font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.8px;line-height:1.05}.brand-name>span{color:#4d8d78}.brand-name small{display:block;font-family:var(--font);font-size:8px;font-weight:700;letter-spacing:1.8px;color:#7a8b82;margin-top:5px}.main-nav{display:flex;align-items:center;gap:30px;font-size:13px;font-weight:700;color:#52645c}.main-nav>a:not(.nav-cta):hover{color:var(--forest-2)}.nav-cta{background:var(--forest);color:white;padding:12px 17px;border-radius:12px}.nav-cta span{color:var(--lime);margin-left:8px}.menu-toggle{display:none;background:transparent;border:0;padding:10px}.menu-toggle span{display:block;width:22px;height:2px;background:var(--forest);margin:5px;border-radius:3px}.hero{background:var(--paper);padding-top:75px;padding-bottom:32px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.03fr .97fr;align-items:center;gap:35px;min-height:445px}.eyebrow{font-size:10px;letter-spacing:1.7px;font-weight:800;color:#4e806f;display:flex;gap:8px;align-items:center;margin-bottom:18px}.eyebrow-dot{width:7px;height:7px;border-radius:50%;background:#6cae91;box-shadow:0 0 0 4px #dcefe4}.hero h1{font-family:var(--display);font-size:clamp(42px,5vw,68px);line-height:1.07;letter-spacing:-3.3px;margin:0;max-width:630px;font-weight:800}.hero h1 span{color:#4e8c76}.hero-lead{font-size:17px;color:#5c6e65;line-height:1.75;max-width:520px;margin:24px 0 28px}.hero-actions{display:flex;align-items:center;gap:25px;flex-wrap:wrap}.button{border:0;min-height:48px;border-radius:13px;padding:13px 19px;display:inline-flex;align-items:center;justify-content:center;gap:12px;font-weight:700;font-size:13px;transition:transform .2s,background .2s,box-shadow .2s}.button:hover:not(:disabled){transform:translateY(-2px)}.button-primary{background:var(--forest);color:white;box-shadow:0 8px 16px rgba(18,59,53,.12)}.button-primary:hover:not(:disabled){background:var(--forest-2);box-shadow:0 10px 22px rgba(18,59,53,.17)}.button-primary span{color:var(--lime);font-size:17px}.button-secondary{background:var(--mint);color:var(--forest)}.button-quiet{background:#eef1e9;color:#49635a}.button-quiet:hover:not(:disabled){background:#e1e9dd}.button-dark{background:var(--forest);color:#fff}.button:disabled{opacity:.45;cursor:not-allowed}.button-full{width:100%}.text-link{font-size:13px;font-weight:700;color:var(--forest);border-bottom:1px solid #a2bbb0;padding-bottom:4px}.text-link span{margin-left:6px}.hero-trust{display:flex;align-items:center;gap:10px;margin-top:31px;color:#6a7a71;font-size:11px;font-weight:600}.check-seal{width:21px;height:21px;border-radius:50%;background:#dcefe4;color:#39775e;display:grid;place-items:center;font-size:12px;font-weight:800}.hero-visual{position:relative;min-height:430px;display:grid;place-items:center}.house-art{position:relative;width:min(100%,430px);height:365px;display:grid;place-items:center;background:#dcefe4;border-radius:48% 52% 44% 56%/49% 44% 56% 51%;transform:rotate(-2deg)}.house-svg{position:relative;z-index:2;width:83%;max-width:350px;filter:drop-shadow(0 14px 8px rgba(18,59,53,.06));transform:rotate(2deg)}.sun-shape{position:absolute;right:47px;top:45px;width:70px;height:70px;border:1px solid rgba(18,59,53,.15);border-radius:50%;background:#f9d67b}.cloud-shape{position:absolute;height:18px;width:68px;border:2px solid #a3cdb7;border-radius:30px;background:#edf6e8}.cloud-a{left:26px;top:82px}.cloud-b{right:20px;bottom:82px;transform:scale(.8)}.visual-orbit{position:absolute;border:1px dashed #b4cdbd;border-radius:50%;width:420px;height:420px}.orbit-two{width:485px;height:485px;opacity:.55}.visual-card{position:absolute;z-index:4;display:flex;align-items:center;gap:11px;background:rgba(255,253,247,.96);border:1px solid rgba(255,255,255,.9);box-shadow:var(--shadow);border-radius:16px;padding:13px 16px;backdrop-filter:blur(10px)}.visual-card strong{display:block;font-size:11px;line-height:1.3}.visual-card small{display:block;color:#7a8980;font-size:10px;margin-top:4px}.visual-note{top:34px;left:-6px}.note-icon{display:grid;place-items:center;width:32px;height:32px;border-radius:11px;background:var(--lime);font-weight:900;color:var(--forest)}.visual-progress{bottom:34px;right:-4px}.progress-ring{width:45px;height:45px;border:4px solid #cbe7d5;border-top-color:#49896f;border-right-color:#49896f;border-radius:50%;display:grid;place-items:center}.progress-ring>span{font-size:12px;font-weight:800;line-height:1}.progress-ring small{font-size:7px;display:block;text-align:center}.visual-caption{position:absolute;bottom:0;font-size:10px;letter-spacing:.4px;color:#779185}.floating-leaf{position:absolute;z-index:3;width:16px;height:27px;background:#76b88d;border-radius:100% 0 100% 0}.leaf-one{bottom:52px;left:56px;transform:rotate(-35deg)}.leaf-two{bottom:62px;right:64px;transform:rotate(40deg) scale(.75)}.hero-metrics{border-top:1px solid #e3e7dc;margin-top:48px;padding-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.metric{display:flex;align-items:center;gap:12px;padding-left:24px;border-left:1px solid #dce2d7}.metric:first-child{padding-left:0;border:0}.metric-icon{width:36px;height:36px;border-radius:12px;background:#e3efe3;display:grid;place-items:center;color:#467961;font-size:20px}.metric strong{display:block;font-size:12px}.metric small{display:block;font-size:10px;color:#7a8980;margin-top:2px}.how-section{background:var(--white)}.section-heading{max-width:680px;margin-bottom:42px}.section-heading.centered{text-align:center;margin-inline:auto}.section-heading.centered .eyebrow{justify-content:center}.section-heading h2,.learn-intro h2,.sources-inner h2{font-family:var(--display);font-size:clamp(31px,3.5vw,44px);letter-spacing:-1.8px;line-height:1.16;margin:0 0 14px;font-weight:800}.section-heading p,.learn-intro>p,.sources-inner p{color:var(--muted);font-size:14px;line-height:1.8;margin:0}.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:19px}.step-card{border:1px solid #e3e8dd;border-radius:21px;padding:25px 25px 28px;background:#fffefa;transition:transform .2s,box-shadow .2s}.step-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.step-number{font-size:11px;letter-spacing:1.5px;font-weight:800;color:#789087;display:flex;justify-content:space-between}.step-number span{font-size:18px;color:#72a88e}.step-icon{display:grid;place-items:center;width:51px;height:51px;border-radius:16px;margin-top:27px}.step-icon svg{width:28px;height:28px;fill:none;stroke:var(--forest);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.icon-mint{background:#dcefe4}.icon-lime{background:#edf7be}.icon-peach{background:#ffe5d8}.step-card h3{font-family:var(--display);font-size:20px;letter-spacing:-.5px;margin:21px 0 9px}.step-card p{font-size:13px;color:#6d7c72;line-height:1.75;margin:0}.principle-banner{display:flex;align-items:center;gap:15px;padding:17px 20px;margin-top:25px;background:#f2f4e7;border-radius:15px}.principle-mark{flex-shrink:0;width:29px;height:29px;display:grid;place-items:center;border-radius:50%;background:#d7f36a;font-weight:900}.principle-banner p{margin:0;font-size:12px;line-height:1.65;color:#5d6f62}.inspection-section{background:var(--paper)}.section-heading-inline{max-width:none;display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:32px}.section-heading-inline p{max-width:600px}.time-pill{background:#e5efe3;color:#4c7863;padding:11px 15px;border-radius:100px;font-size:11px;font-weight:700;white-space:nowrap;margin-bottom:4px}.time-pill span{margin-right:7px;font-size:15px}.inspection-layout{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:22px;align-items:start}.inspection-main{min-width:0;background:#fffefa;border:1px solid #e1e7dc;border-radius:22px;overflow:hidden;box-shadow:0 8px 30px rgba(18,59,53,.035)}.inspection-topbar{padding:22px 26px 20px;display:grid;grid-template-columns:1fr auto;gap:7px 14px;border-bottom:1px solid #e8ece4}.inspection-topbar strong{display:block;font-size:13px}.micro-label{display:block;font-size:9px;letter-spacing:1.4px;font-weight:800;color:#819087;margin-bottom:4px}.progress-percent{font-family:var(--display);font-size:20px!important;letter-spacing:-.5px;color:#4d8c74}.progress-track{grid-column:1/-1;height:7px;background:#ecf0e7;border-radius:20px;overflow:hidden}.progress-track span{display:block;height:100%;width:0;background:var(--forest-2);border-radius:20px;transition:width .3s ease}.zone-tabs{display:flex;gap:7px;padding:18px 24px 0;overflow:auto;scrollbar-width:thin}.zone-tab{border:1px solid #dfe7dc;background:transparent;color:#67766d;border-radius:10px;padding:9px 12px;font-size:11px;font-weight:700;white-space:nowrap;display:flex;align-items:center;gap:7px}.zone-tab .tab-count{display:grid;place-items:center;width:19px;height:19px;background:#eef1e9;border-radius:6px;font-size:9px}.zone-tab[aria-selected="true"]{background:var(--forest);border-color:var(--forest);color:white}.zone-tab[aria-selected="true"] .tab-count{background:var(--lime);color:var(--forest)}.zone-panel{padding:23px 25px 10px;min-height:300px}.zone-panel-head{display:flex;justify-content:space-between;align-items:start;gap:12px;margin-bottom:18px}.zone-panel-head h3{font-family:var(--display);font-size:22px;letter-spacing:-.8px;margin:0 0 4px}.zone-panel-head p{font-size:12px;color:#748178;margin:0;max-width:490px}.zone-complete{font-size:10px;font-weight:700;color:#4a866b;background:#e3f3e8;padding:6px 9px;border-radius:100px;white-space:nowrap}.checklist-items{display:grid;gap:11px}.check-item{border:1px solid #e3e9df;border-radius:15px;padding:15px;display:grid;grid-template-columns:1fr;gap:12px;transition:border .2s,background .2s}.check-item.is-clear{border-color:#c6e2ce;background:#f7fcf7}.check-item.is-risk{border-color:#f2c1ac;background:#fff8f4}.item-heading{display:flex;align-items:flex-start;gap:11px}.item-number{width:30px;height:30px;border-radius:10px;flex-shrink:0;background:#eff2e9;display:grid;place-items:center;color:#65796e;font-size:10px;font-weight:800}.is-clear .item-number{background:#d9eee0;color:#377957}.is-risk .item-number{background:#ffe2d4;color:#ab593c}.item-title{font-size:13px;font-weight:800;display:block;line-height:1.4}.item-description{color:#76847b;font-size:11px;display:block;line-height:1.6;margin-top:4px}.item-status{display:flex;gap:7px;flex-wrap:wrap;padding-left:41px}.status-button{border:1px solid #dfe6db;background:#fffefa;border-radius:9px;padding:8px 11px;font-size:10px;font-weight:700;color:#66766b;display:flex;align-items:center;gap:6px}.status-button .status-symbol{width:16px;height:16px;display:grid;place-items:center;border-radius:50%;background:#eff1e9;font-size:10px}.status-button.selected-clear{background:#e0f2e5;color:#236746;border-color:#b5ddc2}.status-button.selected-risk{background:#fff0e8;color:#a14f35;border-color:#efbaa3}.status-button.selected-clear .status-symbol{background:#bde3c8}.status-button.selected-risk .status-symbol{background:#ffd4c1}.action-recommendation{margin-left:41px;border-left:3px solid #ed9b78;background:#fff1e9;padding:12px 13px;border-radius:0 10px 10px 0}.action-recommendation strong{display:block;font-size:11px;color:#a25339;margin-bottom:4px}.action-recommendation p{font-size:11px;line-height:1.65;color:#805b4d;margin:0 0 9px}.action-done{display:flex;align-items:flex-start;gap:8px;font-size:11px;font-weight:700;color:#725143;cursor:pointer}.action-done input{accent-color:#498b70;margin-top:4px}.action-done.done{color:#2f7754}.inspection-controls{border-top:1px solid #e8ece4;margin-top:7px;padding:20px 25px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.small-note{font-size:10px;color:#879188;line-height:1.6;margin:0;padding:0 25px 20px}.inspection-aside{display:grid;gap:15px}.aside-card{background:#fffefa;border:1px solid #e1e7dc;border-radius:20px;padding:22px}.aside-icon{height:35px;width:35px;display:grid;place-items:center;border-radius:11px;background:#e9f3d1;color:#587d49;font-size:18px}.aside-card h3{font-family:var(--display);font-size:17px;letter-spacing:-.4px;line-height:1.3;margin:15px 0 18px}.legend-row{display:flex;align-items:flex-start;gap:10px;margin-top:16px}.legend-dot{width:9px;height:9px;border-radius:50%;margin-top:5px;flex-shrink:0}.dot-green{background:#5eaa7a}.dot-coral{background:#ec8d6c}.dot-gray{background:#c5ccc1}.legend-row strong{font-size:11px;display:block}.legend-row p{font-size:10px;color:#7e8a80;line-height:1.55;margin:4px 0 0}.aside-tip{background:#fceee4;border-color:#f8dfce}.tip-label{font-size:9px;font-weight:800;letter-spacing:1.3px;color:#b56648}.aside-tip p{font-size:12px;color:#805d4e;line-height:1.7;margin:11px 0 0}.result-panel{background:#fffefa;border:1px solid #cee2d0;border-radius:22px;margin-top:24px;padding:27px;box-shadow:var(--shadow)}.result-panel[hidden]{display:none}.result-heading{display:flex;align-items:start;justify-content:space-between;gap:20px}.result-heading .eyebrow{margin-bottom:7px}.result-heading h3{font-family:var(--display);font-size:24px;letter-spacing:-.8px;margin:0}.result-heading p{font-size:11px;color:#7b887e;margin:6px 0 0}.result-icon{width:43px;height:43px;background:var(--lime);border-radius:14px;display:grid;place-items:center;font-weight:900;font-size:20px}.result-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin:23px 0}.result-stat{background:#f2f5ed;border:1px solid #e9eee5;border-radius:14px;padding:15px}.result-stat strong{display:block;font-family:var(--display);font-size:25px;letter-spacing:-1px}.result-stat span{font-size:10px;color:#748177;display:block;line-height:1.5;margin-top:4px}.result-message{background:#eff6df;border-left:3px solid #95b950;border-radius:0 12px 12px 0;padding:15px 17px;font-size:12px;line-height:1.7;color:#4e6945}.result-message.warning{background:#fff0e8;border-color:#ec936e;color:#8b5037}.result-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:19px}.history-section{background:var(--white)}.history-stamp{display:flex;align-items:center;gap:11px;background:#f2f5ed;border-radius:14px;padding:12px 15px}.stamp-icon{width:34px;height:34px;border-radius:10px;background:#dfeee1;color:#4b8b6b;display:grid;place-items:center;font-size:19px}.history-stamp strong{display:block;font-size:11px}.history-stamp small{display:block;color:#7c897f;font-size:9px;margin-top:2px}.history-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:20px;align-items:stretch}.history-list-wrap{min-width:0}.history-list{display:grid;gap:11px}.history-entry{border:1px solid #e3e9e0;border-radius:16px;padding:18px 20px;display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center}.history-entry-head{display:flex;align-items:center;gap:10px}.history-entry-icon{display:grid;place-items:center;width:38px;height:38px;background:#e4f2e6;color:#3e805f;border-radius:12px;font-size:17px}.history-entry h3{font-size:13px;margin:0}.history-entry time{font-size:10px;color:#8a958d;display:block;margin-top:3px}.history-entry-stats{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.mini-stat{background:#f0f3ec;color:#627469;border-radius:7px;padding:4px 8px;font-size:9px;font-weight:700}.mini-stat.risk{background:#fff0e8;color:#a65c3e}.entry-actions{display:flex;gap:8px;align-items:center}.entry-actions button{border:1px solid #e0e7dd;background:transparent;border-radius:9px;padding:8px 10px;color:#65776b;font-size:10px;font-weight:700}.entry-actions button:hover{background:#f3f6ef}.history-empty{border:1px dashed #d7e1d5;background:#fbfcf6;border-radius:20px;text-align:center;padding:40px 24px}.history-empty[hidden]{display:none}.empty-icon{width:47px;height:47px;display:grid;place-items:center;margin:0 auto 13px;background:#e8f0df;border-radius:15px;font-size:23px;color:#60846b}.history-empty h3{font-family:var(--display);font-size:18px;margin:0 0 7px}.history-empty p{font-size:12px;color:#7c887f;max-width:350px;margin:0 auto 17px}.history-empty .text-link{font-size:11px;display:inline-block}.reminder-card{background:#d7f36a;border-radius:22px;padding:25px;display:flex;flex-direction:column;align-items:flex-start}.reminder-top{display:flex;align-items:center;gap:10px}.reminder-icon{display:grid;place-items:center;width:36px;height:36px;border-radius:12px;background:rgba(18,59,53,.1);font-size:20px}.reminder-tag{font-size:9px;font-weight:800;letter-spacing:1.1px;color:#496c37}.reminder-card h3{font-family:var(--display);font-size:23px;line-height:1.2;letter-spacing:-.9px;margin:24px 0 12px;max-width:230px}.reminder-card>p{font-size:12px;color:#536b42;line-height:1.7;margin:0 0 20px}.reminder-date{width:100%;border-top:1px solid rgba(18,59,53,.16);padding:15px 0 19px;margin-top:auto}.reminder-date span{display:block;color:#64764d;font-size:10px}.reminder-date strong{display:block;font-family:var(--display);font-size:15px;margin-top:3px}.reminder-card .button{margin-top:0}.tiny-note{font-size:9px!important;color:#64764d!important;margin:10px 0 0!important}.learn-section{background:var(--forest);color:white}.learn-section .eyebrow{color:var(--mint)}.learn-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:50px;align-items:start}.learn-intro h2{font-size:clamp(31px,3.5vw,42px);max-width:360px}.learn-intro>p{color:#c4d6ce;margin:17px 0 24px}.learn-intro .button-secondary{background:var(--lime)}.health-info{display:grid;grid-template-columns:1fr 1fr;gap:13px}.health-card{border-radius:18px;padding:21px;background:#1d4d43;border:1px solid rgba(255,255,255,.13)}.alarm-card{background:#4a3c35}.health-card-head{display:flex;gap:10px;align-items:center}.health-icon{width:37px;height:37px;display:grid;place-items:center;border-radius:12px;font-size:17px;font-weight:900;flex-shrink:0}.symptom-icon{background:#d7f36a;color:var(--forest)}.alarm-icon{background:#ffd2bd;color:#923f2d}.health-card .micro-label{color:#adcbc0;font-size:8px}.alarm-card .micro-label{color:#ffcab1}.health-card h3{margin:0;font-family:var(--display);font-size:16px;line-height:1.3;letter-spacing:-.3px}.health-card ul{padding-left:18px;margin:20px 0 17px}.health-card li{font-size:11px;line-height:1.7;color:#dfebe3;padding:2px 0}.health-card li::marker{color:var(--lime)}.alarm-card li::marker{color:#ffb394}.health-card>p{border-top:1px solid rgba(255,255,255,.15);padding-top:13px;margin:0;font-size:10px;line-height:1.7;color:#b8cec4}.alarm-card>p{color:#ffe0d2}.info-callout{display:flex;align-items:flex-start;gap:14px;border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:17px 20px;margin-top:27px;background:rgba(255,255,255,.04)}.callout-symbol{width:27px;height:27px;display:grid;place-items:center;border-radius:50%;background:var(--mint);color:var(--forest);font-weight:900;flex-shrink:0}.info-callout strong{font-size:12px}.info-callout p{font-size:11px;color:#c3d5cd;margin:4px 0 4px}.info-callout a{font-size:11px;color:var(--lime);font-weight:700;text-decoration:underline;text-underline-offset:3px}.quiz-wrap{margin-top:75px;display:grid;grid-template-columns:.7fr 1.3fr;gap:50px;align-items:start}.quiz-heading h2{font-family:var(--display);font-size:35px;letter-spacing:-1.3px;line-height:1.15;margin:0 0 12px}.quiz-heading p{font-size:13px;color:#c3d5cd;line-height:1.7;margin:0}.quiz-card{background:#fffdf7;color:var(--ink);border-radius:21px;padding:25px 27px}.quiz-progress{display:flex;justify-content:space-between;gap:10px;font-size:9px;letter-spacing:1.1px;font-weight:800;color:#809087}.quiz-progress span:last-child{letter-spacing:0;text-transform:none}.quiz-card h3{font-family:var(--display);font-size:18px;line-height:1.45;letter-spacing:-.4px;margin:21px 0}.quiz-options{display:grid;grid-template-columns:1fr 1fr;gap:9px}.quiz-options button{background:#f3f5ee;border:1px solid #dfe6da;border-radius:12px;padding:12px;font-size:12px;font-weight:700;text-align:left;color:#4d6255}.quiz-options button:hover:not(:disabled){border-color:#77b08f;background:#edf7ec}.quiz-options button.chosen-correct{background:#e2f4e5;border-color:#80be91;color:#286d45}.quiz-options button.chosen-wrong{background:#ffebe2;border-color:#eaa488;color:#924a32}.quiz-options button:disabled{cursor:default;opacity:1}.quiz-feedback{padding:12px 14px;border-radius:11px;background:#e9f4e8;color:#3c704e;font-size:11px;line-height:1.65;margin-top:12px}.quiz-feedback.wrong{background:#fff0e7;color:#99563a}.quiz-controls{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:18px}.quiz-controls .button{min-height:41px;padding:10px 14px;font-size:11px}.sources-section{background:#f5f5ec;padding:74px 0}.sources-inner{display:grid;grid-template-columns:.85fr 1.15fr;align-items:start;gap:60px}.sources-inner h2{font-size:29px}.sources-inner p{font-size:12px}.source-links{display:grid;gap:9px}.source-links a{background:#fffefa;border:1px solid #e3e8dc;border-radius:13px;padding:12px 15px;display:flex;align-items:center;justify-content:space-between;gap:14px;transition:border .2s}.source-links a:hover{border-color:#8cb79b}.source-links a span{font-size:9px;color:#7a897e;flex:0 0 auto}.source-links a strong{font-size:11px;text-align:right}.source-links i{font-style:normal;color:#5e9776;margin-left:6px}.site-footer{background:#0d2e29;color:#eaf2e9;padding:31px 0 20px}.footer-main{display:flex;align-items:center;gap:25px;padding-bottom:25px}.brand-footer .brand-mark{background:var(--lime)}.brand-footer .brand-name{color:white}.brand-footer .brand-name>span{color:var(--mint)}.brand-footer .brand-name small{color:#a3bbb0}.footer-main>p{font-size:11px;color:#a9c0b4;margin:0 auto 0 0}.footer-back{font-size:10px;font-weight:700;color:var(--lime)}.footer-bottom{display:flex;justify-content:space-between;gap:16px;border-top:1px solid rgba(255,255,255,.12);padding-top:16px;color:#95b0a3;font-size:9px}.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;z-index:500;background:var(--forest);color:white;padding:12px 18px;border-radius:12px;box-shadow:var(--shadow);font-size:12px;font-weight:600;max-width:min(90vw,470px);transition:opacity .25s,transform .25s}.toast.show{opacity:1;transform:translate(-50%,0)}.print-only{display:none}
+@media(max-width:1000px){.main-nav{gap:17px}.hero-grid{gap:15px}.hero-visual{transform:scale(.93)}.hero h1{font-size:57px}.inspection-layout{grid-template-columns:minmax(0,1fr) 250px}.inspection-aside .aside-card{padding:18px}.history-layout{grid-template-columns:minmax(0,1fr) 270px}.learn-grid,.quiz-wrap{gap:28px}.health-info{gap:9px}.health-card{padding:17px}.sources-inner{gap:35px}}
+@media(max-width:800px){.section-pad{padding:72px 0}.container{width:min(100% - 34px,650px)}.site-header{height:72px}.menu-toggle{display:block;z-index:2}.main-nav{display:none;position:fixed;top:72px;left:0;right:0;background:var(--white);padding:20px 24px 26px;box-shadow:0 20px 30px rgba(18,59,53,.1);flex-direction:column;align-items:stretch;gap:0;border-bottom:1px solid var(--line)}.main-nav.is-open{display:flex}.main-nav>a:not(.nav-cta){padding:14px 4px;border-bottom:1px solid #edf0e8}.nav-cta{margin-top:15px;text-align:center}.hero{padding-top:55px}.hero-grid{grid-template-columns:1fr;gap:5px}.hero-copy{text-align:center}.hero-copy .eyebrow,.hero-actions,.hero-trust{justify-content:center}.hero h1{font-size:clamp(43px,9vw,64px);letter-spacing:-2.5px;margin-inline:auto}.hero-lead{font-size:15px;max-width:540px;margin:20px auto 25px}.hero-trust{margin-top:22px}.hero-visual{min-height:385px;transform:scale(.9);margin-top:-4px}.house-art{height:320px;max-width:385px}.visual-orbit{width:360px;height:360px}.orbit-two{width:415px;height:415px}.visual-note{left:0;top:16px}.visual-progress{right:0;bottom:18px}.hero-caption{display:none}.hero-metrics{margin-top:6px;padding-top:20px;gap:10px}.metric{padding-left:12px}.metric-icon{width:31px;height:31px}.metric strong{font-size:11px}.metric small{font-size:9px}.steps-grid{gap:12px}.step-card{padding:20px 18px}.step-icon{margin-top:20px}.step-card h3{font-size:18px}.step-card p{font-size:12px}.section-heading-inline{align-items:flex-start;flex-direction:column;margin-bottom:26px;gap:15px}.time-pill{margin-bottom:0}.inspection-layout{grid-template-columns:1fr}.inspection-aside{grid-template-columns:1fr 1fr}.aside-card{padding:17px}.aside-card h3{font-size:16px}.legend-row{margin-top:12px}.inspection-aside .aside-tip{display:flex;flex-direction:column;justify-content:center}.zone-panel{padding:20px 18px 10px}.inspection-topbar{padding-inline:19px}.zone-tabs{padding-inline:18px}.inspection-controls{padding-inline:18px}.small-note{padding-inline:18px}.history-layout{grid-template-columns:1fr}.reminder-card{min-height:300px}.learn-grid,.quiz-wrap{grid-template-columns:1fr;gap:30px}.learn-intro h2{max-width:600px}.learn-intro>p{max-width:600px}.health-info{gap:13px}.quiz-wrap{margin-top:58px}.quiz-heading h2{font-size:31px}.sources-inner{grid-template-columns:1fr;gap:25px}.sources-section{padding:62px 0}}
+@media(max-width:560px){.section-pad{padding:60px 0}.container{width:calc(100% - 30px)}.brand-mark{width:38px;height:38px}.brand-name{font-size:18px}.hero{padding-top:48px}.hero h1{font-size:43px;line-height:1.09;letter-spacing:-2.1px}.hero-lead{font-size:14px;line-height:1.7}.hero-actions{gap:15px;flex-direction:column}.hero-actions .button{width:100%;max-width:300px}.hero-trust{font-size:10px;max-width:340px;margin-inline:auto}.hero-visual{min-height:330px;margin:7px -18px -2px;transform:scale(.83)}.house-art{height:310px;max-width:360px}.visual-note{left:-2px;top:7px}.visual-progress{right:-2px;bottom:8px}.hero-metrics{grid-template-columns:1fr;gap:11px;margin-top:8px;padding-top:17px}.metric{border:0;padding:0;max-width:280px;margin-inline:auto;width:100%}.metric-icon{width:33px;height:33px}.metric strong{font-size:11px}.metric small{font-size:10px}.section-heading h2,.learn-intro h2,.sources-inner h2{font-size:32px;letter-spacing:-1.2px}.section-heading p{font-size:13px}.section-heading{margin-bottom:30px}.steps-grid{grid-template-columns:1fr}.step-card{padding:21px}.step-icon{margin-top:16px}.step-card h3{margin-top:15px}.principle-banner{align-items:flex-start;padding:15px}.principle-banner p{font-size:11px}.inspection-topbar{padding:18px 15px}.zone-tabs{padding:15px 13px 0}.zone-panel{padding:19px 13px 9px}.zone-panel-head h3{font-size:19px}.zone-panel-head p{font-size:11px}.zone-panel-head{gap:6px}.zone-complete{font-size:9px;padding:5px 7px}.check-item{padding:12px 10px}.item-title{font-size:12px}.item-description{font-size:10px}.item-status{padding-left:0;gap:6px}.status-button{font-size:9px;padding:8px}.status-button .status-symbol{width:14px;height:14px}.action-recommendation{margin-left:0}.inspection-controls{padding:16px 13px}.inspection-controls .button{flex:1;padding:11px 12px;font-size:11px}.small-note{padding-inline:13px}.inspection-aside{grid-template-columns:1fr}.aside-card{padding:19px}.result-panel{padding:18px}.result-heading h3{font-size:21px}.result-stats{grid-template-columns:1fr 1fr;gap:8px}.result-stat{padding:12px}.result-stat strong{font-size:23px}.result-actions{display:grid;grid-template-columns:1fr}.result-actions .button{width:100%}.history-stamp{width:100%}.history-entry{grid-template-columns:1fr;padding:15px}.entry-actions{justify-content:flex-end}.entry-actions button{flex:1}.history-empty{padding:32px 17px}.health-info{grid-template-columns:1fr}.health-card{padding:20px}.health-card h3{font-size:16px}.quiz-card{padding:20px 16px}.quiz-card h3{font-size:16px}.quiz-options{grid-template-columns:1fr}.quiz-controls .button{font-size:10px;padding:9px}.source-links a{align-items:flex-start;flex-direction:column;gap:5px}.source-links a strong{text-align:left}.footer-main{align-items:flex-start;flex-wrap:wrap;gap:13px}.footer-main>p{flex:1 1 100%;order:3}.footer-back{margin-left:auto;margin-top:8px}.footer-bottom{flex-direction:column;gap:7px;line-height:1.6}.info-callout{padding:15px;gap:10px}.section-heading-inline{gap:14px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+@media print{body{background:#fff;color:#111;font:12px Arial,sans-serif}.site-header,main,footer,.toast{display:none!important}.print-only{display:block!important;padding:18px;max-width:760px;margin:0 auto}.print-only h1{font-size:24px}.print-only h2{font-size:17px;margin:20px 0 7px}.print-only p,.print-only li{font-size:12px;line-height:1.55}.print-only .print-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:18px 0}.print-only .print-metric{border:1px solid #bbb;padding:10px}.print-only .print-metric strong{font-size:18px;display:block}.print-only .print-zone{padding:8px 0;border-top:1px solid #bbb}.print-only .print-ok{color:#236746}.print-only .print-risk{color:#8b452e}.print-only .print-pending{color:#666}.print-only a{color:#111;text-decoration:none}}
+
+</style>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+'use strict';
+
+(() => {
+  const DRAFT_KEY = 'denguecero-draft-v1';
+  const HISTORY_KEY = 'denguecero-history-v1';
+  const MAX_HISTORY = 30;
+
+  const zones = [
+    {
+      id: 'water', name: 'Agua almacenada', short: 'Agua', icon: '◈', intro: 'Revisa los recipientes que usas para almacenar agua y comprueba que estén limpios y bien tapados.',
+      items: [
+        { id: 'tank-clean', title: 'Tanques, cilindros y depósitos', description: '¿Los recipientes de almacenamiento están limpios por dentro y sus paredes pueden revisarse de forma segura?', action: 'Lava y escobilla las paredes internas y los bordes al limpiar el recipiente. Sigue las indicaciones sanitarias para el manejo del agua almacenada.' },
+        { id: 'tank-cover', title: 'Tapas de los depósitos', description: '¿Los tanques, cilindros y baldes que guardan agua están bien tapados?', action: 'Coloca una tapa que cierre bien. Revisa que no queden huecos por donde pueda entrar el zancudo.' },
+        { id: 'unused-buckets', title: 'Baldes y recipientes sin uso', description: '¿Hay baldes u otros recipientes guardados que puedan acumular agua?', action: 'Vacía y limpia los objetos que acumularon agua. Guarda los recipientes sin uso boca abajo y bajo techo cuando sea posible.' }
+      ]
+    },
+    {
+      id: 'outside', name: 'Patio y exteriores', short: 'Patio', icon: '⌂', intro: 'Los objetos olvidados al aire libre pueden juntar agua de lluvia o de otras actividades.',
+      items: [
+        { id: 'bottles-cans', title: 'Botellas, latas y envases', description: '¿Hay envases, tapas, chapas o desechos que puedan retener agua?', action: 'Retira los objetos que no se utilizan. Desecha los residuos de forma adecuada y evita dejar envases a la intemperie.' },
+        { id: 'tires-toys', title: 'Llantas, juguetes y objetos en desuso', description: '¿Hay llantas, juguetes u objetos cóncavos donde pueda quedar agua?', action: 'Elimina el agua acumulada y guarda bajo techo lo que todavía se use. Lleva los residuos a un punto de disposición adecuado.' },
+        { id: 'yard-puddles', title: 'Objetos y rincones con agua acumulada', description: '¿Observas recipientes u objetos que retienen agua en el patio, azotea o pasadizo?', action: 'Vacía y limpia los recipientes que puedas alcanzar con seguridad. No subas a techos ni ingreses a zonas peligrosas para revisar.' }
+      ]
+    },
+    {
+      id: 'kitchen-bath', name: 'Cocina y baño', short: 'Cocina/baño', icon: '▦', intro: 'Comprueba los recipientes y las bandejas que pueden acumular agua dentro de casa.',
+      items: [
+        { id: 'fridge-tray', title: 'Bandejas detrás o debajo de equipos', description: '¿Hay una bandeja o recipiente que acumule agua detrás de la refrigeradora u otro equipo?', action: 'Si es accesible y seguro, retira el agua y limpia la bandeja según el manual del equipo. Pide ayuda si necesitas mover un electrodoméstico.' },
+        { id: 'bath-containers', title: 'Recipientes del baño', description: '¿Hay tinas, baldes u otros recipientes con agua que no estén cubiertos?', action: 'Vacía y limpia los recipientes cuando no se necesiten, o mantenlos bien tapados si almacenan agua.' },
+        { id: 'drain-trays', title: 'Platos y bandejas que retienen agua', description: '¿Hay platos, bandejas o recipientes donde permanezca agua después de limpiar?', action: 'Retira el agua acumulada y limpia el recipiente. Mantén secos los espacios donde no sea necesario almacenar agua.' }
+      ]
+    },
+    {
+      id: 'plants', name: 'Plantas y floreros', short: 'Plantas', icon: '✿', intro: 'Revisa macetas, floreros y plantas acuáticas, sin dañar las plantas ni dejar agua estancada.',
+      items: [
+        { id: 'vases', title: 'Floreros y plantas en agua', description: '¿Tienes flores o plantas colocadas en recipientes con agua?', action: 'Para los floreros, el Minsa recomienda reemplazar el agua por arena húmeda o esponja floral. Lava el recipiente antes de volver a usarlo.' },
+        { id: 'plant-saucers', title: 'Platos debajo de las macetas', description: '¿Los platos de macetas acumulan agua después del riego o la lluvia?', action: 'Retira el agua acumulada y limpia los platos. Ajusta el riego para evitar que quede agua innecesaria.' },
+        { id: 'water-plants', title: 'Plantas acuáticas y recipientes decorativos', description: '¿Hay plantas acuáticas o adornos con agua que no se limpian con frecuencia?', action: 'Revisa y limpia el recipiente con regularidad. Considera una alternativa que no deje agua estancada, según las necesidades de la planta.' }
+      ]
+    },
+    {
+      id: 'pets-misc', name: 'Mascotas y otros objetos', short: 'Mascotas', icon: '♡', intro: 'El cuidado de las mascotas y los objetos pequeños también forma parte de la prevención.',
+      items: [
+        { id: 'pet-bowls', title: 'Bebederos de mascotas', description: '¿Los bebederos se renuevan y limpian con regularidad?', action: 'Cambia el agua y lava el recipiente con frecuencia. No dejes agua quieta durante periodos prolongados.' },
+        { id: 'pet-toys', title: 'Juguetes y accesorios al aire libre', description: '¿Los juguetes, bebederos portátiles u otros accesorios pueden acumular agua?', action: 'Vacía y limpia los accesorios, y guárdalos en un lugar cubierto cuando no se utilicen.' },
+        { id: 'small-containers', title: 'Otros recipientes pequeños', description: '¿Has revisado tapas, envases pequeños, canaletas accesibles u otros objetos que retengan agua?', action: 'Retira el agua de los objetos y elimina o guarda adecuadamente aquellos que no se utilicen. Revisa solo los lugares a los que puedas acceder de forma segura.' }
+      ]
+    }
+  ];
+
+  const quizQuestions = [
+    { question: 'El zancudo que transmite el dengue puede reproducirse en recipientes con agua acumulada.', correct: true, explanation: 'Verdadero. Tanques, floreros, baldes, llantas y otros objetos que retienen agua pueden convertirse en criaderos.' },
+    { question: 'Para prevenir el dengue, los floreros deben conservar agua limpia todo el tiempo.', correct: false, explanation: 'Falso. El Minsa recomienda reemplazar el agua de los floreros por arena húmeda o esponja floral y mantener limpio el recipiente.' },
+    { question: 'Si una persona presenta señales de alarma, debe esperar a ver si mejora al día siguiente.', correct: false, explanation: 'Falso. Dolor abdominal intenso y persistente, vómitos persistentes, sangrado o somnolencia requieren atención médica inmediata.' }
+  ];
+
+  const defaultAnswers = () => {
+    const output = {};
+    zones.forEach(zone => zone.items.forEach(item => { output[item.id] = { status: 'pending', actionDone: false }; }));
+    return output;
+  };
+  const parseJSON = (value, fallback) => {
+    try { return value ? JSON.parse(value) : fallback; } catch { return fallback; }
+  };
+  const safeGet = key => {
+    try { return window.localStorage.getItem(key); } catch { return null; }
+  };
+  const safeSet = (key, value) => {
+    try { window.localStorage.setItem(key, value); return true; } catch { return false; }
+  };
+  const safeRemove = key => { try { window.localStorage.removeItem(key); } catch { /* El navegador puede bloquear almacenamiento. */ } };
+  const clone = obj => JSON.parse(JSON.stringify(obj));
+  const formatDate = value => {
+    const date = value instanceof Date ? value : new Date(value);
+    if (Number.isNaN(date.getTime())) return 'Fecha no disponible';
+    return new Intl.DateTimeFormat('es-PE', { day: 'numeric', month: 'long', year: 'numeric' }).format(date);
+  };
+  const formatDateTime = value => {
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) return 'Fecha no disponible';
+    return new Intl.DateTimeFormat('es-PE', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' }).format(date);
+  };
+  const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
+  const allItems = zones.flatMap(zone => zone.items.map(item => ({ ...item, zoneName: zone.name, zoneId: zone.id })));
+  const totalItems = allItems.length;
+  let answers = defaultAnswers();
+  let activeZone = zones[0].id;
+  let history = [];
+  let selectedSnapshot = null;
+  let currentResult = null;
+  let toastTimer = null;
+
+  const $ = selector => document.querySelector(selector);
+  const zoneTabs = $('#zone-tabs');
+  const zonePanel = $('#zone-panel');
+  const resultPanel = $('#result-panel');
+  const toastEl = $('#toast');
+
+  function normalizeAnswers(input) {
+    const baseline = defaultAnswers();
+    if (!input || typeof input !== 'object') return baseline;
+    allItems.forEach(item => {
+      const raw = input[item.id];
+      if (raw && ['pending', 'clear', 'risk'].includes(raw.status)) {
+        baseline[item.id] = { status: raw.status, actionDone: raw.status === 'risk' && raw.actionDone === true };
+      }
+    });
+    return baseline;
+  }
+  function loadHistory() {
+    const parsed = parseJSON(safeGet(HISTORY_KEY), []);
+    if (!Array.isArray(parsed)) return [];
+    return parsed.filter(entry => entry && typeof entry.id === 'string' && entry.createdAt && entry.answers).map(entry => ({
+      id: entry.id,
+      createdAt: entry.createdAt,
+      answers: normalizeAnswers(entry.answers),
+      stats: statsFor(entry.answers)
+    })).slice(0, MAX_HISTORY);
+  }
+  function statsFor(answerMap) {
+    const normalized = normalizeAnswers(answerMap);
+    const states = Object.values(normalized);
+    const reviewed = states.filter(state => state.status !== 'pending').length;
+    const risks = states.filter(state => state.status === 'risk').length;
+    const actionsDone = states.filter(state => state.status === 'risk' && state.actionDone).length;
+    const pendingActions = risks - actionsDone;
+    return { total: totalItems, reviewed, notReviewed: totalItems - reviewed, risks, actionsDone, pendingActions, percent: Math.round((reviewed / totalItems) * 100) };
+  }
+  function saveDraft() { safeSet(DRAFT_KEY, JSON.stringify(answers)); }
+  function showToast(message) {
+    toastEl.textContent = message;
+    toastEl.classList.add('show');
+    if (toastTimer) window.clearTimeout(toastTimer);
+    toastTimer = window.setTimeout(() => toastEl.classList.remove('show'), 3200);
+  }
+  function reviewedForZone(zone) {
+    return zone.items.filter(item => answers[item.id].status !== 'pending').length;
+  }
+  function renderZoneTabs() {
+    zoneTabs.innerHTML = zones.map(zone => {
+      const reviewed = reviewedForZone(zone);
+      const selected = zone.id === activeZone;
+      return `<button class="zone-tab" type="button" role="tab" id="tab-${zone.id}" aria-controls="zone-panel" aria-selected="${selected}" tabindex="${selected ? '0' : '-1'}" data-zone="${zone.id}"><span aria-hidden="true">${zone.icon}</span>${escapeHTML(zone.short)}<span class="tab-count">${reviewed}/${zone.items.length}</span></button>`;
+    }).join('');
+  }
+  function renderZonePanel() {
+    const zone = zones.find(value => value.id === activeZone) || zones[0];
+    const completed = reviewedForZone(zone);
+    const zoneIndex = zones.findIndex(value => value.id === zone.id);
+    zonePanel.setAttribute('role', 'tabpanel');
+    zonePanel.setAttribute('aria-labelledby', `tab-${zone.id}`);
+    zonePanel.innerHTML = `
+      <div class="zone-panel-head"><div><h3>${escapeHTML(zone.name)}</h3><p>${escapeHTML(zone.intro)}</p></div><span class="zone-complete">${completed} de ${zone.items.length} revisados</span></div>
+      <div class="checklist-items">${zone.items.map((item, itemIndex) => {
+        const state = answers[item.id];
+        const itemClass = state.status === 'clear' ? 'is-clear' : state.status === 'risk' ? 'is-risk' : '';
+        return `<article class="check-item ${itemClass}" data-item="${item.id}">
+          <div class="item-heading"><span class="item-number">${String(zoneIndex * 3 + itemIndex + 1).padStart(2, '0')}</span><div><span class="item-title">${escapeHTML(item.title)}</span><span class="item-description">${escapeHTML(item.description)}</span></div></div>
+          <div class="item-status" role="group" aria-label="Estado: ${escapeHTML(item.title)}">
+            <button type="button" class="status-button ${state.status === 'clear' ? 'selected-clear' : ''}" data-item-status="clear" data-item-id="${item.id}" aria-pressed="${state.status === 'clear'}"><span class="status-symbol">✓</span> Revisado, sin hallazgo</button>
+            <button type="button" class="status-button ${state.status === 'risk' ? 'selected-risk' : ''}" data-item-status="risk" data-item-id="${item.id}" aria-pressed="${state.status === 'risk'}"><span class="status-symbol">!</span> Posible criadero</button>
+          </div>
+          ${state.status === 'risk' ? `<div class="action-recommendation"><strong>Qué puedes hacer</strong><p>${escapeHTML(item.action)}</p><label class="action-done ${state.actionDone ? 'done' : ''}"><input type="checkbox" data-action-done="${item.id}" ${state.actionDone ? 'checked' : ''}> Marcar acción como realizada</label></div>` : ''}
+        </article>`;
+      }).join('')}</div>`;
+  }
+  function updateProgress() {
+    const stats = statsFor(answers);
+    $('#progress-label').textContent = `${stats.reviewed} de ${stats.total} puntos revisados`;
+    $('#progress-percent').textContent = `${stats.percent}%`;
+    $('#progress-fill').style.width = `${stats.percent}%`;
+    $('#progress-track').setAttribute('aria-valuenow', String(stats.percent));
+  }
+  function renderInspection() { renderZoneTabs(); renderZonePanel(); updateProgress(); }
+  function handleStatus(itemId, status) {
+    if (!answers[itemId] || !['clear', 'risk'].includes(status)) return;
+    const prev = answers[itemId];
+    answers[itemId] = { status, actionDone: status === 'risk' && prev.status === 'risk' && prev.actionDone };
+    saveDraft();
+    renderInspection();
+  }
+
+  function showResult(snapshot, scroll = false) {
+    selectedSnapshot = snapshot;
+    const stats = snapshot.stats || statsFor(snapshot.answers);
+    currentResult = snapshot;
+    resultPanel.hidden = false;
+    const partial = stats.notReviewed > 0;
+    $('#result-title').textContent = partial ? 'Tu revisión guardada (incompleta)' : 'Tu resultado preventivo';
+    $('#result-date').textContent = `Guardada el ${formatDateTime(snapshot.createdAt)}`;
+    $('#result-stats').innerHTML = `
+      <div class="result-stat"><strong>${stats.percent}%</strong><span>de la lista revisada</span></div>
+      <div class="result-stat"><strong>${stats.risks}</strong><span>posibles criaderos registrados</span></div>
+      <div class="result-stat"><strong>${stats.actionsDone}</strong><span>acciones marcadas como realizadas</span></div>
+      <div class="result-stat"><strong>${stats.notReviewed}</strong><span>puntos aún sin revisar</span></div>`;
+    let message;
+    if (partial) {
+      message = `Has revisado ${stats.reviewed} de ${stats.total} puntos. Puedes continuar con los que faltan. Los puntos no revisados no deben interpretarse como lugares seguros.`;
+    } else if (stats.risks === 0) {
+      message = 'Marcaste todos los puntos de la lista como revisados sin hallar posibles criaderos. Mantén la limpieza y vuelve a inspeccionar periódicamente; esta lista no certifica que la vivienda esté libre de mosquitos.';
+    } else if (stats.pendingActions > 0) {
+      message = `Registraste ${stats.risks} posibles criaderos. Marcaste ${stats.actionsDone} acciones como realizadas y quedan ${stats.pendingActions} por atender. Sigue las recomendaciones y solicita ayuda si el lugar no es seguro.`;
+    } else {
+      message = `Registraste ${stats.risks} posibles criaderos y marcaste sus acciones como realizadas. Revisa nuevamente los puntos de forma periódica y recuerda que este resumen depende de tus respuestas.`;
+    }
+    $('#result-message').textContent = message;
+    $('#result-message').classList.toggle('warning', stats.pendingActions > 0 || partial);
+    renderPrintReport(snapshot);
+    if (scroll) resultPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  function renderPrintReport(snapshot) {
+    const stats = snapshot.stats || statsFor(snapshot.answers);
+    const sections = zones.map(zone => {
+      const li = zone.items.map(item => {
+        const state = snapshot.answers[item.id] || { status: 'pending', actionDone: false };
+        const statusText = state.status === 'clear' ? 'Revisado, sin hallazgo' : state.status === 'risk' ? `Posible criadero · acción ${state.actionDone ? 'marcada como realizada' : 'pendiente'}` : 'Sin revisar';
+        const className = state.status === 'clear' ? 'print-ok' : state.status === 'risk' ? 'print-risk' : 'print-pending';
+        return `<li class="${className}"><strong>${escapeHTML(item.title)}:</strong> ${escapeHTML(statusText)}${state.status === 'risk' ? `<br><small>Recomendación: ${escapeHTML(item.action)}</small>` : ''}</li>`;
+      }).join('');
+      return `<div class="print-zone"><h2>${escapeHTML(zone.name)}</h2><ul>${li}</ul></div>`;
+    }).join('');
+    $('#print-content').innerHTML = `<h1>DengueCero — Resumen de inspección</h1><p><strong>Fecha:</strong> ${escapeHTML(formatDateTime(snapshot.createdAt))}</p><p>Este resumen refleja las respuestas introducidas por el usuario. No es una certificación sanitaria ni un diagnóstico.</p><div class="print-summary"><div class="print-metric"><strong>${stats.percent}%</strong>Lista revisada</div><div class="print-metric"><strong>${stats.risks}</strong>Posibles criaderos</div><div class="print-metric"><strong>${stats.actionsDone}</strong>Acciones realizadas*</div><div class="print-metric"><strong>${stats.notReviewed}</strong>Sin revisar</div></div><p>* Acciones marcadas como realizadas por el usuario.</p>${sections}<hr><p>Fuente de recomendaciones: Ministerio de Salud del Perú, campaña de prevención del dengue: https://www.gob.pe/institucion/minsa/campañas/8255-campana-de-prevencion-contra-el-dengue</p>`;
+  }
+  function saveInspection() {
+    const stats = statsFor(answers);
+    if (stats.reviewed === 0) {
+      showToast('Marca al menos un punto como revisado antes de guardar.');
+      return;
+    }
+    const snapshot = { id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`, createdAt: new Date().toISOString(), answers: clone(answers), stats };
+    history.unshift(snapshot);
+    history = history.slice(0, MAX_HISTORY);
+    const stored = safeSet(HISTORY_KEY, JSON.stringify(history));
+    if (!stored) {
+      history.shift();
+      showToast('No se pudo guardar el historial. Revisa la configuración del navegador.');
+      return;
+    }
+    renderHistory();
+    showResult(snapshot, true);
+    showToast(stats.notReviewed ? 'Revisión parcial guardada en este dispositivo.' : 'Revisión guardada correctamente.');
+  }
+  function renderHistory() {
+    const list = $('#history-list');
+    const empty = $('#history-empty');
+    empty.hidden = history.length > 0;
+    list.innerHTML = history.map(entry => {
+      const stats = entry.stats || statsFor(entry.answers);
+      return `<article class="history-entry"><div><div class="history-entry-head"><span class="history-entry-icon" aria-hidden="true">✓</span><div><h3>Revisión preventiva${stats.notReviewed ? ' · parcial' : ''}</h3><time datetime="${escapeHTML(entry.createdAt)}">${escapeHTML(formatDateTime(entry.createdAt))}</time></div></div><div class="history-entry-stats"><span class="mini-stat">${stats.percent}% revisado</span><span class="mini-stat ${stats.risks ? 'risk' : ''}">${stats.risks} posibles criaderos</span><span class="mini-stat">${stats.actionsDone} acciones realizadas</span></div></div><div class="entry-actions"><button type="button" data-view-id="${escapeHTML(entry.id)}">Ver resumen</button><button type="button" data-delete-id="${escapeHTML(entry.id)}" aria-label="Eliminar revisión del ${escapeHTML(formatDate(entry.createdAt))}">Eliminar</button></div></article>`;
+    }).join('');
+    if (history.length) {
+      $('#last-review-date').textContent = formatDate(history[0].createdAt);
+      const next = new Date(history[0].createdAt);
+      next.setDate(next.getDate() + 7);
+      $('#next-review-date').textContent = formatDate(next);
+      $('#calendar-reminder').disabled = false;
+    } else {
+      $('#last-review-date').textContent = 'Aún sin registros';
+      $('#next-review-date').textContent = 'Guarda tu primera revisión';
+      $('#calendar-reminder').disabled = true;
+    }
+  }
+  function resetInspection() {
+    if (statsFor(answers).reviewed > 0 && !window.confirm('¿Reiniciar la revisión actual? El avance sin guardar se perderá.')) return;
+    answers = defaultAnswers();
+    activeZone = zones[0].id;
+    saveDraft();
+    renderInspection();
+    showToast('La revisión actual se ha reiniciado.');
+  }
+  function newInspection() {
+    answers = defaultAnswers();
+    activeZone = zones[0].id;
+    safeSet(DRAFT_KEY, JSON.stringify(answers));
+    resultPanel.hidden = true;
+    selectedSnapshot = null;
+    renderInspection();
+    $('#inspeccion').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    showToast('Ya puedes comenzar una nueva revisión.');
+  }
+  function shareText(snapshot) {
+    const stats = snapshot.stats || statsFor(snapshot.answers);
+    const unresolved = stats.pendingActions > 0 ? ` Quedan ${stats.pendingActions} acciones por atender.` : '';
+    return `Mi revisión preventiva con DengueCero (${formatDate(snapshot.createdAt)}): revisé ${stats.reviewed} de ${stats.total} puntos (${stats.percent}%), registré ${stats.risks} posibles criaderos y marqué ${stats.actionsDone} acciones como realizadas.${unresolved}\nPrevenir comienza en casa. Consulta las recomendaciones oficiales del Minsa: https://www.gob.pe/institucion/minsa/campa%C3%B1as/8255-campana-de-prevencion-contra-el-dengue\nEste resultado refleja mis respuestas y no es una certificación sanitaria.`;
+  }
+  async function shareResult() {
+    if (!selectedSnapshot) { showToast('Guarda o abre una revisión antes de compartir.'); return; }
+    const text = shareText(selectedSnapshot);
+    try {
+      if (navigator.share) {
+        await navigator.share({ title: 'Mi revisión preventiva — DengueCero', text });
+      } else if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(text);
+        showToast('Resumen copiado. Ya puedes compartirlo.');
+      } else {
+        const shareURL = `https://wa.me/?text=${encodeURIComponent(text)}`;
+        window.open(shareURL, '_blank', 'noopener,noreferrer');
+        showToast('Se abrió WhatsApp para compartir el resumen.');
+      }
+    } catch (error) {
+      if (error && error.name === 'AbortError') return;
+      const shareURL = `https://wa.me/?text=${encodeURIComponent(text)}`;
+      window.open(shareURL, '_blank', 'noopener,noreferrer');
+    }
+  }
+  function addCalendarReminder() {
+    if (!history.length) return;
+    const start = new Date(history[0].createdAt);
+    start.setDate(start.getDate() + 7);
+    start.setHours(9, 0, 0, 0);
+    const end = new Date(start.getTime() + 10 * 60 * 1000);
+    const icsDate = date => `${date.getFullYear()}${String(date.getMonth() + 1).padStart(2, '0')}${String(date.getDate()).padStart(2, '0')}T${String(date.getHours()).padStart(2, '0')}${String(date.getMinutes()).padStart(2, '0')}00`;
+    const stamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+    const content = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//DengueCero//Recordatorio preventivo//ES', 'CALSCALE:GREGORIAN', 'BEGIN:VEVENT', `UID:denguecero-${Date.now()}@local`, `DTSTAMP:${stamp}`, `DTSTART:${icsDate(start)}`, `DTEND:${icsDate(end)}`, 'SUMMARY:Revisar mi hogar con DengueCero', 'DESCRIPTION:Inspecciona recipientes y posibles criaderos de zancudos. Sigue las recomendaciones sanitarias oficiales.', 'END:VEVENT', 'END:VCALENDAR'].join('\r\n');
+    const blob = new Blob([content], { type: 'text/calendar;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const anchor = document.createElement('a');
+    anchor.href = url; anchor.download = 'recordatorio-denguecero.ics';
+    document.body.appendChild(anchor); anchor.click(); anchor.remove();
+    URL.revokeObjectURL(url);
+    showToast('Recordatorio descargado. Ábrelo para añadirlo a tu calendario.');
+  }
+
+  // Menú móvil accesible.
+  const menuToggle = $('#menu-toggle');
+  const mainNav = $('#main-nav');
+  menuToggle.addEventListener('click', () => {
+    const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', String(!expanded));
+    menuToggle.setAttribute('aria-label', expanded ? 'Abrir menú' : 'Cerrar menú');
+    mainNav.classList.toggle('is-open', !expanded);
+    document.body.classList.toggle('menu-open', !expanded);
+  });
+  mainNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+    mainNav.classList.remove('is-open'); document.body.classList.remove('menu-open');
+    menuToggle.setAttribute('aria-expanded', 'false'); menuToggle.setAttribute('aria-label', 'Abrir menú');
+  }));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && mainNav.classList.contains('is-open')) {
+      mainNav.classList.remove('is-open'); document.body.classList.remove('menu-open');
+      menuToggle.setAttribute('aria-expanded', 'false'); menuToggle.setAttribute('aria-label', 'Abrir menú'); menuToggle.focus();
+    }
+  });
+
+  zoneTabs.addEventListener('click', event => {
+    const button = event.target.closest('[data-zone]');
+    if (!button) return;
+    activeZone = button.dataset.zone;
+    renderInspection();
+  });
+  zoneTabs.addEventListener('keydown', event => {
+    if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+    const current = zones.findIndex(zone => zone.id === activeZone);
+    let index = current;
+    if (event.key === 'ArrowRight') index = (current + 1) % zones.length;
+    if (event.key === 'ArrowLeft') index = (current - 1 + zones.length) % zones.length;
+    if (event.key === 'Home') index = 0;
+    if (event.key === 'End') index = zones.length - 1;
+    activeZone = zones[index].id; renderInspection(); $(`#tab-${activeZone}`).focus(); event.preventDefault();
+  });
+  zonePanel.addEventListener('click', event => {
+    const button = event.target.closest('[data-item-status]');
+    if (!button) return;
+    handleStatus(button.dataset.itemId, button.dataset.itemStatus);
+  });
+  zonePanel.addEventListener('change', event => {
+    const checkbox = event.target.closest('[data-action-done]');
+    if (!checkbox) return;
+    const itemId = checkbox.dataset.actionDone;
+    if (!answers[itemId] || answers[itemId].status !== 'risk') return;
+    answers[itemId].actionDone = checkbox.checked;
+    saveDraft();
+    renderInspection();
+    showToast(checkbox.checked ? 'Acción marcada como realizada.' : 'Acción marcada como pendiente.');
+  });
+  $('#save-inspection').addEventListener('click', saveInspection);
+  $('#reset-inspection').addEventListener('click', resetInspection);
+  $('#new-inspection').addEventListener('click', newInspection);
+  $('#print-report').addEventListener('click', () => { if (selectedSnapshot) { renderPrintReport(selectedSnapshot); window.print(); } });
+  $('#share-report').addEventListener('click', shareResult);
+  $('#calendar-reminder').addEventListener('click', addCalendarReminder);
+  $('#history-list').addEventListener('click', event => {
+    const viewButton = event.target.closest('[data-view-id]');
+    const deleteButton = event.target.closest('[data-delete-id]');
+    if (viewButton) {
+      const entry = history.find(item => item.id === viewButton.dataset.viewId);
+      if (entry) showResult(entry, true);
+    }
+    if (deleteButton) {
+      const entry = history.find(item => item.id === deleteButton.dataset.deleteId);
+      if (!entry) return;
+      if (!window.confirm(`¿Eliminar la revisión guardada del ${formatDate(entry.createdAt)}?`)) return;
+      history = history.filter(item => item.id !== entry.id);
+      safeSet(HISTORY_KEY, JSON.stringify(history));
+      renderHistory();
+      if (selectedSnapshot && selectedSnapshot.id === entry.id) { selectedSnapshot = null; resultPanel.hidden = true; }
+      showToast('La revisión se eliminó del historial de este dispositivo.');
+    }
+  });
+
+  // Reto educativo: tres preguntas, respuesta explicada y puntuación local.
+  let quizIndex = 0;
+  let quizScore = 0;
+  let quizAnswered = false;
+  let quizFinished = false;
+  const quizOptions = $('#quiz-options');
+  function renderQuiz() {
+    const nextButton = $('#quiz-next');
+    const feedback = $('#quiz-feedback');
+    feedback.hidden = true; feedback.classList.remove('wrong');
+    if (quizFinished) {
+      $('#quiz-step').textContent = 'RETO COMPLETADO';
+      $('#quiz-score-label').textContent = `${quizScore} de ${quizQuestions.length} correctas`;
+      $('#quiz-question').textContent = '¡Gracias por aprender y compartir información confiable!';
+      quizOptions.hidden = true;
+      feedback.hidden = false;
+      feedback.textContent = quizScore === quizQuestions.length ? '¡Excelente! Respondiste todo correctamente. Mantén estos hábitos y consulta fuentes oficiales.' : `Obtuviste ${quizScore} de ${quizQuestions.length}. Revisa las explicaciones y vuelve a intentarlo para reforzar lo aprendido.`;
+      nextButton.hidden = true;
+      return;
+    }
+    const question = quizQuestions[quizIndex];
+    $('#quiz-step').textContent = `PREGUNTA ${quizIndex + 1} DE ${quizQuestions.length}`;
+    $('#quiz-score-label').textContent = `${quizScore} correctas`;
+    $('#quiz-question').textContent = question.question;
+    quizOptions.hidden = false;
+    quizOptions.innerHTML = `<button type="button" data-answer="true" ${quizAnswered ? 'disabled' : ''}>Verdadero</button><button type="button" data-answer="false" ${quizAnswered ? 'disabled' : ''}>Falso</button>`;
+    if (quizAnswered) {
+      const chosen = quizOptions.querySelector(`[data-answer="${String(question.correct)}"]`);
+      if (chosen) chosen.classList.add('chosen-correct');
+      feedback.hidden = false; feedback.textContent = question.explanation;
+    }
+    nextButton.hidden = false;
+    nextButton.disabled = !quizAnswered;
+    nextButton.textContent = quizIndex === quizQuestions.length - 1 ? 'Ver resultado →' : 'Siguiente pregunta →';
+  }
+  quizOptions.addEventListener('click', event => {
+    const button = event.target.closest('[data-answer]');
+    if (!button || quizAnswered || quizFinished) return;
+    const question = quizQuestions[quizIndex];
+    const choice = button.dataset.answer === 'true';
+    quizAnswered = true;
+    if (choice === question.correct) quizScore += 1;
+    quizOptions.querySelectorAll('button').forEach(option => {
+      option.disabled = true;
+      if ((option.dataset.answer === 'true') === question.correct) option.classList.add('chosen-correct');
+      else if (option === button) option.classList.add('chosen-wrong');
+    });
+    const feedback = $('#quiz-feedback'); feedback.hidden = false; feedback.textContent = question.explanation; feedback.classList.toggle('wrong', choice !== question.correct);
+    $('#quiz-score-label').textContent = `${quizScore} correctas`;
+    $('#quiz-next').disabled = false;
+  });
+  $('#quiz-next').addEventListener('click', () => {
+    if (!quizAnswered || quizFinished) return;
+    if (quizIndex < quizQuestions.length - 1) { quizIndex += 1; quizAnswered = false; renderQuiz(); }
+    else { quizFinished = true; renderQuiz(); }
+  });
+  $('#quiz-restart').addEventListener('click', () => { quizIndex = 0; quizScore = 0; quizAnswered = false; quizFinished = false; renderQuiz(); });
+
+  // Inicialización: recuperar borrador e historial si el navegador lo permite.
+  answers = normalizeAnswers(parseJSON(safeGet(DRAFT_KEY), null));
+  history = loadHistory();
+  renderInspection();
+  renderHistory();
+  renderQuiz();
+})();
+
+});
+</script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="DengueCero, ir al inicio">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36"><path d="M18 3.5 30 8.4v8.7c0 7.4-5.2 12-12 15.4C11.2 29.1 6 24.5 6 17.1V8.4L18 3.5Z" fill="currentColor"/><path d="m11.8 18.1 4.1 4.2 8.5-9" fill="none" stroke="#123b35" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="brand-name">Dengue<span>Cero</span><small>PREVENCIÓN EN CASA</small></span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#inspeccion">Revisa tu casa</a>
+        <a href="#historial">Mi historial</a>
+        <a href="#aprende">Aprende</a>
+        <a class="nav-cta" href="#inspeccion">Empezar revisión <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero section-pad" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> PREVENCIÓN QUE EMPIEZA EN CASA</div>
+          <h1>Diez minutos hoy.<br><span>Un hogar más seguro.</span></h1>
+          <p class="hero-lead">Una guía práctica para revisar tu vivienda, reconocer posibles criaderos del zancudo y saber qué hacer con cada hallazgo.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#inspeccion">Revisar mi hogar <span aria-hidden="true">→</span></a>
+            <a class="text-link" href="#como-funciona">Conoce cómo funciona <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-trust"><span class="check-seal" aria-hidden="true">✓</span><span>Basado en recomendaciones de prevención del Minsa.</span></div>
+        </div>
+        <div class="hero-visual" aria-label="Ilustración de un hogar protegido y una lista de prevención" role="img">
+          <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div>
+          <div class="visual-card visual-note"><span class="note-icon">✓</span><span><strong>Tu revisión, paso a paso</strong><small>Sin crear una cuenta</small></span></div>
+          <div class="house-art">
+            <div class="sun-shape"></div><div class="cloud-shape cloud-a"></div><div class="cloud-shape cloud-b"></div>
+            <svg class="house-svg" viewBox="0 0 350 300" aria-hidden="true">
+              <path d="M38 141 174 39 312 141" fill="#123b35" stroke="#123b35" stroke-width="13" stroke-linejoin="round"/>
+              <path d="M65 130 174 48 285 130V263H65Z" fill="#fffdf5" stroke="#123b35" stroke-width="7" stroke-linejoin="round"/>
+              <path d="M127 263V184Q127 167 144 167H174Q191 167 191 184V263" fill="#d7f36a" stroke="#123b35" stroke-width="6"/>
+              <path d="M88 157H119V191H88Z" fill="#9bddd0" stroke="#123b35" stroke-width="5"/>
+              <path d="M227 157H258V191H227Z" fill="#9bddd0" stroke="#123b35" stroke-width="5"/>
+              <path d="M103 157V191M88 174H119M242 157V191M227 174H258" stroke="#123b35" stroke-width="3"/>
+              <path d="M52 266H299" stroke="#123b35" stroke-width="7" stroke-linecap="round"/>
+              <path d="M32 265c0-14 11-24 24-24s24 10 24 24M265 266c0-19 13-31 29-31s29 12 29 31" fill="#d7f36a" stroke="#123b35" stroke-width="5"/>
+              <circle cx="291" cy="52" r="20" fill="#ff9a72"/>
+              <path d="M25 104c-9-16 1-31 16-31 7-14 29-13 33 2 17-2 25 18 13 29Z" fill="#fffdf5" stroke="#123b35" stroke-width="4" stroke-linejoin="round"/>
+            </svg>
+            <span class="floating-leaf leaf-one"></span><span class="floating-leaf leaf-two"></span>
+          </div>
+          <div class="visual-card visual-progress"><div class="progress-ring"><span>10<small>min</small></span></div><span><strong>Una rutina sencilla</strong><small>Revisa · Actúa · Repite</small></span></div>
+          <div class="visual-caption">La prevención es una tarea compartida.</div>
+        </div>
+      </div>
+      <div class="container hero-metrics" aria-label="Características de DengueCero">
+        <div class="metric"><span class="metric-icon">◷</span><div><strong>10 minutos</strong><small>para una revisión guiada</small></div></div>
+        <div class="metric"><span class="metric-icon">⌂</span><div><strong>Por zonas</strong><small>sin olvidar los rincones</small></div></div>
+        <div class="metric"><span class="metric-icon">▣</span><div><strong>Tu historial</strong><small>guardado en tu dispositivo</small></div></div>
+      </div>
+    </section>
+
+    <section class="how-section section-pad" id="como-funciona">
+      <div class="container">
+        <div class="section-heading centered">
+          <div class="eyebrow">SENCILLO, PRÁCTICO, CONSTANTE</div>
+          <h2>De la revisión a la acción.</h2>
+          <p>No necesitas ser especialista. Sigue el recorrido y decide qué hacer con cada posible criadero que encuentres.</p>
+        </div>
+        <div class="steps-grid">
+          <article class="step-card"><div class="step-number">01 <span>→</span></div><div class="step-icon icon-mint"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="13.5" cy="13.5" r="8"/><path d="m20 20 7 7M9 13.5l3 3 6-7"/></svg></div><h3>Inspecciona</h3><p>Recorre las zonas de tu casa y marca cada punto que revises.</p></article>
+          <article class="step-card"><div class="step-number">02 <span>→</span></div><div class="step-icon icon-lime"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3 28 8v8c0 7-5 11-12 14C9 27 4 23 4 16V8Z"/><path d="m10 16 4 4 8-9"/></svg></div><h3>Identifica</h3><p>Distingue lo que está revisado de los posibles criaderos que requieren atención.</p></article>
+          <article class="step-card"><div class="step-number">03 <span>✓</span></div><div class="step-icon icon-peach"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M7 16.5 13 22l12-13M16 3l4 3 5-.2.2 5 3 4-3 4 .2 5-5-.2-4 3-4-3-5 .2.2-5-3-4 3-4L7 6l5 .2Z"/></svg></div><h3>Actúa y repite</h3><p>Sigue la recomendación, registra la acción y vuelve a revisar periódicamente.</p></article>
+        </div>
+        <div class="principle-banner"><span class="principle-mark">!</span><p><strong>Recuerda:</strong> un posible criadero no confirma que haya dengue. La inspección es una ayuda preventiva, no un diagnóstico ni una certificación sanitaria.</p></div>
+      </div>
+    </section>
+
+    <section class="inspection-section section-pad" id="inspeccion">
+      <div class="container">
+        <div class="section-heading section-heading-inline">
+          <div><div class="eyebrow">TU CASA, PASO A PASO</div><h2>Revisa tu hogar</h2><p>Marca lo que encuentres con honestidad. Puedes guardar el avance y continuar después.</p></div>
+          <div class="time-pill"><span aria-hidden="true">◷</span> Aproximadamente 10 min</div>
+        </div>
+        <div class="inspection-layout">
+          <div class="inspection-main">
+            <div class="inspection-topbar">
+              <div><span class="micro-label">TU PROGRESO</span><strong id="progress-label">0 de 15 puntos revisados</strong></div>
+              <strong class="progress-percent" id="progress-percent">0%</strong>
+              <div class="progress-track" role="progressbar" aria-label="Progreso de inspección" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-track"><span id="progress-fill"></span></div>
+            </div>
+            <div class="zone-tabs" id="zone-tabs" role="tablist" aria-label="Zonas de la vivienda"></div>
+            <div class="zone-panel" id="zone-panel" aria-live="polite"></div>
+            <div class="inspection-controls">
+              <button class="button button-quiet" type="button" id="reset-inspection">Reiniciar revisión</button>
+              <button class="button button-primary" type="button" id="save-inspection">Guardar revisión <span aria-hidden="true">→</span></button>
+            </div>
+            <p class="small-note" id="save-note" role="status">Tu avance se guarda en este dispositivo. No se envía a ninguna entidad.</p>
+          </div>
+          <aside class="inspection-aside">
+            <div class="aside-card aside-guide">
+              <div class="aside-icon">✳</div><h3>¿Cómo marcar cada punto?</h3>
+              <div class="legend-row"><span class="legend-dot dot-green"></span><div><strong>Revisado, sin hallazgo</strong><p>Comprobaste el lugar y no encontraste un posible criadero.</p></div></div>
+              <div class="legend-row"><span class="legend-dot dot-coral"></span><div><strong>Posible criadero</strong><p>Encontraste agua acumulada o un recipiente que necesita atención.</p></div></div>
+              <div class="legend-row"><span class="legend-dot dot-gray"></span><div><strong>Sin revisar</strong><p>Aún no has comprobado ese punto.</p></div></div>
+            </div>
+            <div class="aside-card aside-tip"><span class="tip-label">CONSEJO DE SEGURIDAD</span><p>No subas a techos ni uses escaleras inestables para completar la revisión. Pide ayuda a una persona adulta si el acceso no es seguro.</p></div>
+          </aside>
+        </div>
+        <section class="result-panel" id="result-panel" aria-labelledby="result-title" hidden>
+          <div class="result-heading"><div><div class="eyebrow">RESUMEN DE TU REVISIÓN</div><h3 id="result-title">Tu resultado preventivo</h3><p id="result-date"></p></div><span class="result-icon" aria-hidden="true">✓</span></div>
+          <div class="result-stats" id="result-stats"></div>
+          <div class="result-message" id="result-message"></div>
+          <div class="result-actions"><button class="button button-primary" id="print-report" type="button">Imprimir / guardar PDF</button><button class="button button-secondary" id="share-report" type="button">Compartir resumen</button><button class="button button-quiet" id="new-inspection" type="button">Nueva revisión</button></div>
+          <p class="small-note">Este resumen refleja únicamente tus respuestas. No certifica que la vivienda esté libre de mosquitos.</p>
+        </section>
+      </div>
+    </section>
+
+    <section class="history-section section-pad" id="historial">
+      <div class="container">
+        <div class="section-heading section-heading-inline">
+          <div><div class="eyebrow">CADA REVISIÓN CUENTA</div><h2>Mi historial</h2><p>Consulta las revisiones que guardaste en este dispositivo.</p></div>
+          <div class="history-stamp"><span class="stamp-icon">↻</span><span><strong id="last-review-date">Aún sin registros</strong><small>Última revisión guardada</small></span></div>
+        </div>
+        <div class="history-layout">
+          <div class="history-list-wrap"><div class="history-list" id="history-list"></div><div class="history-empty" id="history-empty"><div class="empty-icon">▤</div><h3>Tu historial empieza aquí</h3><p>Cuando guardes tu primera revisión, podrás consultar sus resultados en esta sección.</p><a class="text-link" href="#inspeccion">Comenzar mi primera revisión →</a></div></div>
+          <aside class="reminder-card"><div class="reminder-top"><span class="reminder-icon">◷</span><span class="reminder-tag">HÁBITO PREVENTIVO</span></div><h3>Que no se te pase volver a revisar.</h3><p>La prevención funciona mejor cuando se convierte en una rutina. Te sugerimos repetir el recorrido dentro de una semana.</p><div class="reminder-date"><span>Próxima revisión sugerida</span><strong id="next-review-date">Guarda tu primera revisión</strong></div><button class="button button-dark button-full" id="calendar-reminder" type="button" disabled>Añadir al calendario</button><p class="tiny-note">Es un recordatorio orientativo, no una notificación automática.</p></aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="learn-section section-pad" id="aprende">
+      <div class="container">
+        <div class="learn-grid">
+          <div class="learn-intro"><div class="eyebrow">INFORMACIÓN PARA ACTUAR</div><h2>Aprende a reconocer las señales.</h2><p>Conocer los síntomas y las señales de alarma ayuda a buscar atención a tiempo. La web ofrece orientación general; no sustituye una evaluación médica.</p><a class="button button-secondary" href="https://www.gob.pe/institucion/minsa/campa%C3%B1as/8255-campana-de-prevencion-contra-el-dengue" target="_blank" rel="noopener noreferrer">Guía oficial del Minsa <span aria-hidden="true">↗</span></a></div>
+          <div class="health-info">
+            <article class="health-card symptoms-card"><div class="health-card-head"><span class="health-icon symptom-icon">＋</span><div><span class="micro-label">PUEDEN APARECER</span><h3>Síntomas frecuentes</h3></div></div><ul><li>Fiebre</li><li>Dolor de cabeza o detrás de los ojos</li><li>Dolor muscular o articular</li><li>Náuseas o sarpullido</li></ul><p>Si sospechas dengue, busca orientación sanitaria y evita automedicarte.</p></article>
+            <article class="health-card alarm-card"><div class="health-card-head"><span class="health-icon alarm-icon">!</span><div><span class="micro-label">ATENCIÓN INMEDIATA</span><h3>Señales de alarma</h3></div></div><ul><li>Dolor abdominal intenso y persistente</li><li>Vómitos persistentes</li><li>Sangrado</li><li>Somnolencia, irritabilidad o decaimiento intenso</li></ul><p><strong>Busca atención médica inmediata.</strong> No esperes a que los síntomas empeoren.</p></article>
+          </div>
+        </div>
+        <div class="info-callout"><div class="callout-symbol">i</div><div><strong>Orientación sanitaria en Perú</strong><p>El Minsa ofrece orientación gratuita a través de la Línea 113, opción 1. Confirma los canales vigentes en la web oficial.</p><a href="https://www.gob.pe/113" target="_blank" rel="noopener noreferrer">Consultar información de la Línea 113 ↗</a></div></div>
+        <div class="quiz-wrap">
+          <div class="quiz-heading"><div class="eyebrow">PON A PRUEBA LO QUE APRENDISTE</div><h2>Mitos y verdades</h2><p>Responde estas tres preguntas rápidas y revisa la explicación.</p></div>
+          <div class="quiz-card" id="quiz-card">
+            <div class="quiz-progress"><span id="quiz-step">PREGUNTA 1 DE 3</span><span id="quiz-score-label">0 correctas</span></div>
+            <h3 id="quiz-question">El zancudo que transmite el dengue puede reproducirse en recipientes con agua acumulada.</h3>
+            <div class="quiz-options" id="quiz-options"><button type="button" data-answer="true">Verdadero</button><button type="button" data-answer="false">Falso</button></div>
+            <div class="quiz-feedback" id="quiz-feedback" role="status" hidden></div>
+            <div class="quiz-controls"><button class="button button-quiet" id="quiz-restart" type="button">Reiniciar</button><button class="button button-primary" id="quiz-next" type="button" disabled>Siguiente pregunta →</button></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sources-section section-pad" id="fuentes">
+      <div class="container sources-inner"><div><div class="eyebrow">CONTENIDO CON RESPALDO</div><h2>Información confiable, decisiones responsables.</h2><p>Las recomendaciones de DengueCero se apoyan en fuentes sanitarias oficiales. Consulta siempre la versión más reciente.</p></div><div class="source-links"><a href="https://www.gob.pe/institucion/minsa/campa%C3%B1as/8255-campana-de-prevencion-contra-el-dengue" target="_blank" rel="noopener noreferrer"><span>Minsa</span><strong>Campaña de prevención del dengue <i>↗</i></strong></a><a href="https://www.gob.pe/institucion/minsa/noticias/1341720-como-prevenir-en-el-hogar-la-aparicion-del-zancudo-que-transmite-el-dengue" target="_blank" rel="noopener noreferrer"><span>Minsa · 27 ene. 2026</span><strong>Prevención en el hogar <i>↗</i></strong></a><a href="https://www.who.int/es/news-room/fact-sheets/detail/dengue-and-severe-dengue" target="_blank" rel="noopener noreferrer"><span>Organización Mundial de la Salud</span><strong>Dengue y dengue grave <i>↗</i></strong></a></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-main"><a class="brand brand-footer" href="#inicio"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36"><path d="M18 3.5 30 8.4v8.7c0 7.4-5.2 12-12 15.4C11.2 29.1 6 24.5 6 17.1V8.4L18 3.5Z" fill="currentColor"/><path d="m11.8 18.1 4.1 4.2 8.5-9" fill="none" stroke="#123b35" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="brand-name">Dengue<span>Cero</span><small>PREVENCIÓN EN CASA</small></span></a><p>Una herramienta educativa para convertir la prevención en un hábito.</p><a class="footer-back" href="#inicio">Volver arriba ↑</a></div><div class="container footer-bottom"><span>Proyecto educativo independiente · No es una herramienta oficial del Minsa.</span><span>Hecho para informar, orientar y prevenir.</span></div></footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <section class="print-only" id="print-content" aria-label="Informe de inspección para imprimir"></section>
+</body>
+</html>

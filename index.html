@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123b35">
+  <meta name="description" content="DengueCero te guía para revisar tu hogar, identificar posibles criaderos del zancudo y registrar acciones preventivas en 10 minutos.">
+  <title>DengueCero — La prevención comienza en casa</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23123b35'/%3E%3Cpath d='M50 17 77 28v20c0 18-12 29-27 36C35 77 23 66 23 48V28z' fill='%23d7f36a'/%3E%3Cpath d='m36 49 9 9 20-22' fill='none' stroke='%23123b35' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="DengueCero, ir al inicio">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36"><path d="M18 3.5 30 8.4v8.7c0 7.4-5.2 12-12 15.4C11.2 29.1 6 24.5 6 17.1V8.4L18 3.5Z" fill="currentColor"/><path d="m11.8 18.1 4.1 4.2 8.5-9" fill="none" stroke="#123b35" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="brand-name">Dengue<span>Cero</span><small>PREVENCIÓN EN CASA</small></span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#inspeccion">Revisa tu casa</a>
+        <a href="#historial">Mi historial</a>
+        <a href="#aprende">Aprende</a>
+        <a class="nav-cta" href="#inspeccion">Empezar revisión <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero section-pad" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> PREVENCIÓN QUE EMPIEZA EN CASA</div>
+          <h1>Diez minutos hoy.<br><span>Un hogar más seguro.</span></h1>
+          <p class="hero-lead">Una guía práctica para revisar tu vivienda, reconocer posibles criaderos del zancudo y saber qué hacer con cada hallazgo.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#inspeccion">Revisar mi hogar <span aria-hidden="true">→</span></a>
+            <a class="text-link" href="#como-funciona">Conoce cómo funciona <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-trust"><span class="check-seal" aria-hidden="true">✓</span><span>Basado en recomendaciones de prevención del Minsa.</span></div>
+        </div>
+        <div class="hero-visual" aria-label="Ilustración de un hogar protegido y una lista de prevención" role="img">
+          <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div>
+          <div class="visual-card visual-note"><span class="note-icon">✓</span><span><strong>Tu revisión, paso a paso</strong><small>Sin crear una cuenta</small></span></div>
+          <div class="house-art">
+            <div class="sun-shape"></div><div class="cloud-shape cloud-a"></div><div class="cloud-shape cloud-b"></div>
+            <svg class="house-svg" viewBox="0 0 350 300" aria-hidden="true">
+              <path d="M38 141 174 39 312 141" fill="#123b35" stroke="#123b35" stroke-width="13" stroke-linejoin="round"/>
+              <path d="M65 130 174 48 285 130V263H65Z" fill="#fffdf5" stroke="#123b35" stroke-width="7" stroke-linejoin="round"/>
+              <path d="M127 263V184Q127 167 144 167H174Q191 167 191 184V263" fill="#d7f36a" stroke="#123b35" stroke-width="6"/>
+              <path d="M88 157H119V191H88Z" fill="#9bddd0" stroke="#123b35" stroke-width="5"/>
+              <path d="M227 157H258V191H227Z" fill="#9bddd0" stroke="#123b35" stroke-width="5"/>
+              <path d="M103 157V191M88 174H119M242 157V191M227 174H258" stroke="#123b35" stroke-width="3"/>
+              <path d="M52 266H299" stroke="#123b35" stroke-width="7" stroke-linecap="round"/>
+              <path d="M32 265c0-14 11-24 24-24s24 10 24 24M265 266c0-19 13-31 29-31s29 12 29 31" fill="#d7f36a" stroke="#123b35" stroke-width="5"/>
+              <circle cx="291" cy="52" r="20" fill="#ff9a72"/>
+              <path d="M25 104c-9-16 1-31 16-31 7-14 29-13 33 2 17-2 25 18 13 29Z" fill="#fffdf5" stroke="#123b35" stroke-width="4" stroke-linejoin="round"/>
+            </svg>
+            <span class="floating-leaf leaf-one"></span><span class="floating-leaf leaf-two"></span>
+          </div>
+          <div class="visual-card visual-progress"><div class="progress-ring"><span>10<small>min</small></span></div><span><strong>Una rutina sencilla</strong><small>Revisa · Actúa · Repite</small></span></div>
+          <div class="visual-caption">La prevención es una tarea compartida.</div>
+        </div>
+      </div>
+      <div class="container hero-metrics" aria-label="Características de DengueCero">
+        <div class="metric"><span class="metric-icon">◷</span><div><strong>10 minutos</strong><small>para una revisión guiada</small></div></div>
+        <div class="metric"><span class="metric-icon">⌂</span><div><strong>Por zonas</strong><small>sin olvidar los rincones</small></div></div>
+        <div class="metric"><span class="metric-icon">▣</span><div><strong>Tu historial</strong><small>guardado en tu dispositivo</small></div></div>
+      </div>
+    </section>
+
+    <section class="how-section section-pad" id="como-funciona">
+      <div class="container">
+        <div class="section-heading centered">
+          <div class="eyebrow">SENCILLO, PRÁCTICO, CONSTANTE</div>
+          <h2>De la revisión a la acción.</h2>
+          <p>No necesitas ser especialista. Sigue el recorrido y decide qué hacer con cada posible criadero que encuentres.</p>
+        </div>
+        <div class="steps-grid">
+          <article class="step-card"><div class="step-number">01 <span>→</span></div><div class="step-icon icon-mint"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="13.5" cy="13.5" r="8"/><path d="m20 20 7 7M9 13.5l3 3 6-7"/></svg></div><h3>Inspecciona</h3><p>Recorre las zonas de tu casa y marca cada punto que revises.</p></article>
+          <article class="step-card"><div class="step-number">02 <span>→</span></div><div class="step-icon icon-lime"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3 28 8v8c0 7-5 11-12 14C9 27 4 23 4 16V8Z"/><path d="m10 16 4 4 8-9"/></svg></div><h3>Identifica</h3><p>Distingue lo que está revisado de los posibles criaderos que requieren atención.</p></article>
+          <article class="step-card"><div class="step-number">03 <span>✓</span></div><div class="step-icon icon-peach"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M7 16.5 13 22l12-13M16 3l4 3 5-.2.2 5 3 4-3 4 .2 5-5-.2-4 3-4-3-5 .2.2-5-3-4 3-4L7 6l5 .2Z"/></svg></div><h3>Actúa y repite</h3><p>Sigue la recomendación, registra la acción y vuelve a revisar periódicamente.</p></article>
+        </div>
+        <div class="principle-banner"><span class="principle-mark">!</span><p><strong>Recuerda:</strong> un posible criadero no confirma que haya dengue. La inspección es una ayuda preventiva, no un diagnóstico ni una certificación sanitaria.</p></div>
+      </div>
+    </section>
+
+    <section class="inspection-section section-pad" id="inspeccion">
+      <div class="container">
+        <div class="section-heading section-heading-inline">
+          <div><div class="eyebrow">TU CASA, PASO A PASO</div><h2>Revisa tu hogar</h2><p>Marca lo que encuentres con honestidad. Puedes guardar el avance y continuar después.</p></div>
+          <div class="time-pill"><span aria-hidden="true">◷</span> Aproximadamente 10 min</div>
+        </div>
+        <div class="inspection-layout">
+          <div class="inspection-main">
+            <div class="inspection-topbar">
+              <div><span class="micro-label">TU PROGRESO</span><strong id="progress-label">0 de 15 puntos revisados</strong></div>
+              <strong class="progress-percent" id="progress-percent">0%</strong>
+              <div class="progress-track" role="progressbar" aria-label="Progreso de inspección" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-track"><span id="progress-fill"></span></div>
+            </div>
+            <div class="zone-tabs" id="zone-tabs" role="tablist" aria-label="Zonas de la vivienda"></div>
+            <div class="zone-panel" id="zone-panel" aria-live="polite"></div>
+            <div class="inspection-controls">
+              <button class="button button-quiet" type="button" id="reset-inspection">Reiniciar revisión</button>
+              <button class="button button-primary" type="button" id="save-inspection">Guardar revisión <span aria-hidden="true">→</span></button>
+            </div>
+            <p class="small-note" id="save-note" role="status">Tu avance se guarda en este dispositivo. No se envía a ninguna entidad.</p>
+          </div>
+          <aside class="inspection-aside">
+            <div class="aside-card aside-guide">
+              <div class="aside-icon">✳</div><h3>¿Cómo marcar cada punto?</h3>
+              <div class="legend-row"><span class="legend-dot dot-green"></span><div><strong>Revisado, sin hallazgo</strong><p>Comprobaste el lugar y no encontraste un posible criadero.</p></div></div>
+              <div class="legend-row"><span class="legend-dot dot-coral"></span><div><strong>Posible criadero</strong><p>Encontraste agua acumulada o un recipiente que necesita atención.</p></div></div>
+              <div class="legend-row"><span class="legend-dot dot-gray"></span><div><strong>Sin revisar</strong><p>Aún no has comprobado ese punto.</p></div></div>
+            </div>
+            <div class="aside-card aside-tip"><span class="tip-label">CONSEJO DE SEGURIDAD</span><p>No subas a techos ni uses escaleras inestables para completar la revisión. Pide ayuda a una persona adulta si el acceso no es seguro.</p></div>
+          </aside>
+        </div>
+        <section class="result-panel" id="result-panel" aria-labelledby="result-title" hidden>
+          <div class="result-heading"><div><div class="eyebrow">RESUMEN DE TU REVISIÓN</div><h3 id="result-title">Tu resultado preventivo</h3><p id="result-date"></p></div><span class="result-icon" aria-hidden="true">✓</span></div>
+          <div class="result-stats" id="result-stats"></div>
+          <div class="result-message" id="result-message"></div>
+          <div class="result-actions"><button class="button button-primary" id="print-report" type="button">Imprimir / guardar PDF</button><button class="button button-secondary" id="share-report" type="button">Compartir resumen</button><button class="button button-quiet" id="new-inspection" type="button">Nueva revisión</button></div>
+          <p class="small-note">Este resumen refleja únicamente tus respuestas. No certifica que la vivienda esté libre de mosquitos.</p>
+        </section>
+      </div>
+    </section>
+
+    <section class="history-section section-pad" id="historial">
+      <div class="container">
+        <div class="section-heading section-heading-inline">
+          <div><div class="eyebrow">CADA REVISIÓN CUENTA</div><h2>Mi historial</h2><p>Consulta las revisiones que guardaste en este dispositivo.</p></div>
+          <div class="history-stamp"><span class="stamp-icon">↻</span><span><strong id="last-review-date">Aún sin registros</strong><small>Última revisión guardada</small></span></div>
+        </div>
+        <div class="history-layout">
+          <div class="history-list-wrap"><div class="history-list" id="history-list"></div><div class="history-empty" id="history-empty"><div class="empty-icon">▤</div><h3>Tu historial empieza aquí</h3><p>Cuando guardes tu primera revisión, podrás consultar sus resultados en esta sección.</p><a class="text-link" href="#inspeccion">Comenzar mi primera revisión →</a></div></div>
+          <aside class="reminder-card"><div class="reminder-top"><span class="reminder-icon">◷</span><span class="reminder-tag">HÁBITO PREVENTIVO</span></div><h3>Que no se te pase volver a revisar.</h3><p>La prevención funciona mejor cuando se convierte en una rutina. Te sugerimos repetir el recorrido dentro de una semana.</p><div class="reminder-date"><span>Próxima revisión sugerida</span><strong id="next-review-date">Guarda tu primera revisión</strong></div><button class="button button-dark button-full" id="calendar-reminder" type="button" disabled>Añadir al calendario</button><p class="tiny-note">Es un recordatorio orientativo, no una notificación automática.</p></aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="learn-section section-pad" id="aprende">
+      <div class="container">
+        <div class="learn-grid">
+          <div class="learn-intro"><div class="eyebrow">INFORMACIÓN PARA ACTUAR</div><h2>Aprende a reconocer las señales.</h2><p>Conocer los síntomas y las señales de alarma ayuda a buscar atención a tiempo. La web ofrece orientación general; no sustituye una evaluación médica.</p><a class="button button-secondary" href="https://www.gob.pe/institucion/minsa/campa%C3%B1as/8255-campana-de-prevencion-contra-el-dengue" target="_blank" rel="noopener noreferrer">Guía oficial del Minsa <span aria-hidden="true">↗</span></a></div>
+          <div class="health-info">
+            <article class="health-card symptoms-card"><div class="health-card-head"><span class="health-icon symptom-icon">＋</span><div><span class="micro-label">PUEDEN APARECER</span><h3>Síntomas frecuentes</h3></div></div><ul><li>Fiebre</li><li>Dolor de cabeza o detrás de los ojos</li><li>Dolor muscular o articular</li><li>Náuseas o sarpullido</li></ul><p>Si sospechas dengue, busca orientación sanitaria y evita automedicarte.</p></article>
+            <article class="health-card alarm-card"><div class="health-card-head"><span class="health-icon alarm-icon">!</span><div><span class="micro-label">ATENCIÓN INMEDIATA</span><h3>Señales de alarma</h3></div></div><ul><li>Dolor abdominal intenso y persistente</li><li>Vómitos persistentes</li><li>Sangrado</li><li>Somnolencia, irritabilidad o decaimiento intenso</li></ul><p><strong>Busca atención médica inmediata.</strong> No esperes a que los síntomas empeoren.</p></article>
+          </div>
+        </div>
+        <div class="info-callout"><div class="callout-symbol">i</div><div><strong>Orientación sanitaria en Perú</strong><p>El Minsa ofrece orientación gratuita a través de la Línea 113, opción 1. Confirma los canales vigentes en la web oficial.</p><a href="https://www.gob.pe/113" target="_blank" rel="noopener noreferrer">Consultar información de la Línea 113 ↗</a></div></div>
+        <div class="quiz-wrap">
+          <div class="quiz-heading"><div class="eyebrow">PON A PRUEBA LO QUE APRENDISTE</div><h2>Mitos y verdades</h2><p>Responde estas tres preguntas rápidas y revisa la explicación.</p></div>
+          <div class="quiz-card" id="quiz-card">
+            <div class="quiz-progress"><span id="quiz-step">PREGUNTA 1 DE 3</span><span id="quiz-score-label">0 correctas</span></div>
+            <h3 id="quiz-question">El zancudo que transmite el dengue puede reproducirse en recipientes con agua acumulada.</h3>
+            <div class="quiz-options" id="quiz-options"><button type="button" data-answer="true">Verdadero</button><button type="button" data-answer="false">Falso</button></div>
+            <div class="quiz-feedback" id="quiz-feedback" role="status" hidden></div>
+            <div class="quiz-controls"><button class="button button-quiet" id="quiz-restart" type="button">Reiniciar</button><button class="button button-primary" id="quiz-next" type="button" disabled>Siguiente pregunta →</button></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sources-section section-pad" id="fuentes">
+      <div class="container sources-inner"><div><div class="eyebrow">CONTENIDO CON RESPALDO</div><h2>Información confiable, decisiones responsables.</h2><p>Las recomendaciones de DengueCero se apoyan en fuentes sanitarias oficiales. Consulta siempre la versión más reciente.</p></div><div class="source-links"><a href="https://www.gob.pe/institucion/minsa/campa%C3%B1as/8255-campana-de-prevencion-contra-el-dengue" target="_blank" rel="noopener noreferrer"><span>Minsa</span><strong>Campaña de prevención del dengue <i>↗</i></strong></a><a href="https://www.gob.pe/institucion/minsa/noticias/1341720-como-prevenir-en-el-hogar-la-aparicion-del-zancudo-que-transmite-el-dengue" target="_blank" rel="noopener noreferrer"><span>Minsa · 27 ene. 2026</span><strong>Prevención en el hogar <i>↗</i></strong></a><a href="https://www.who.int/es/news-room/fact-sheets/detail/dengue-and-severe-dengue" target="_blank" rel="noopener noreferrer"><span>Organización Mundial de la Salud</span><strong>Dengue y dengue grave <i>↗</i></strong></a></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-main"><a class="brand brand-footer" href="#inicio"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36"><path d="M18 3.5 30 8.4v8.7c0 7.4-5.2 12-12 15.4C11.2 29.1 6 24.5 6 17.1V8.4L18 3.5Z" fill="currentColor"/><path d="m11.8 18.1 4.1 4.2 8.5-9" fill="none" stroke="#123b35" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="brand-name">Dengue<span>Cero</span><small>PREVENCIÓN EN CASA</small></span></a><p>Una herramienta educativa para convertir la prevención en un hábito.</p><a class="footer-back" href="#inicio">Volver arriba ↑</a></div><div class="container footer-bottom"><span>Proyecto educativo independiente · No es una herramienta oficial del Minsa.</span><span>Hecho para informar, orientar y prevenir.</span></div></footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <section class="print-only" id="print-content" aria-label="Informe de inspección para imprimir"></section>
+</body>
+</html>
