@@ -8,7 +8,12 @@
   <title>DengueCero — La prevención comienza en casa</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23123b35'/%3E%3Cpath d='M50 17 77 28v20c0 18-12 29-27 36C35 77 23 66 23 48V28z' fill='%23d7f36a'/%3E%3Cpath d='m36 49 9 9 20-22' fill='none' stroke='%23123b35' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="css/styles.css">
-  <script src="js/app.js" defer></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="css/mapa.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" defer></script>
+<script src="js/mapa-config.js" defer></script>
+<script src="js/app.js" defer></script>
+<script src="js/mapa.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
@@ -22,6 +27,7 @@
       <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
         <a href="#como-funciona">Cómo funciona</a>
         <a href="#inspeccion">Revisa tu casa</a>
+<a href="#mapa">Mapa</a>
         <a href="#historial">Mi historial</a>
         <a href="#brigada">Brigada escolar</a>
         <a href="#aprende">Aprende</a>
@@ -125,13 +131,39 @@
           <div class="result-stats" id="result-stats"></div>
           <div class="result-message" id="result-message"></div>
           <section class="result-priority-panel" id="result-priority" aria-labelledby="result-priority-title" hidden></section>
-          <div class="result-actions"><button class="button button-primary" id="print-report" type="button">Imprimir / guardar PDF</button><button class="button button-secondary" id="share-report" type="button">Compartir resumen</button><button class="button button-quiet" id="new-inspection" type="button">Nueva revisión</button></div>
+          <div class="result-actions"><button class="button button-primary" id="print-report" type="button">Imprimir / guardar PDF</button><button class="button button-secondary" id="share-report" type="button">Compartir resumen</button><a class="button button-secondary" href="#mapa">Reportar al mapa</a><button class="button button-quiet" id="new-inspection" type="button">Nueva revisión</button></div>
           <p class="small-note">Este resumen refleja únicamente tus respuestas. No certifica que la vivienda esté libre de mosquitos.</p>
         </section>
       </div>
     </section>
 
-    <section class="history-section section-pad" id="historial">
+    <section class="map-section section-pad" id="mapa">
+<div class="container">
+<div class="section-heading section-heading-inline">
+<div><h2>Mapa comunitario de criaderos</h2><p>Cada punto es agua acumulada que conviene atender. Complementa la vigilancia oficial; no confirma casos de dengue.</p></div>
+<div class="time-pill" id="mapa-stats" role="status">Cargando reportes…</div>
+</div>
+<p class="map-banner" id="mapa-demo" hidden><strong>Modo demostración.</strong> Los puntos de ejemplo no son reportes reales y lo que envíes se guarda solo en este dispositivo.</p>
+<div class="map-layout">
+<div id="mapa-canvas" class="map-canvas" role="application" aria-label="Mapa de reportes de criaderos en el Perú"></div>
+<form id="mapa-form" class="map-form" novalidate>
+<h3>Reportar un posible criadero</h3>
+<p class="small-note">Marca la zona en el mapa. Solo guardamos una ubicación aproximada (unos 100 m), sin nombres, direcciones ni fotos.</p>
+<label>Qué encontraste
+<select id="mapa-tipo" required><option value="">Elige una opción</option><option value="tanque">Tanque o cilindro</option><option value="balde">Balde o recipiente sin uso</option><option value="llanta">Llanta u objeto en desuso</option><option value="envase">Botella, lata o envase</option><option value="maceta">Florero o plato de maceta</option><option value="bebedero">Bebedero de mascota</option><option value="otro">Otro recipiente con agua</option></select>
+</label>
+<label class="check-row"><input type="checkbox" id="mapa-atendido"> Ya lo eliminé o lo cubrí</label>
+<div class="map-buttons"><button type="button" class="button button-quiet" id="mapa-gps">Usar mi ubicación</button><button type="button" class="button button-quiet" id="mapa-centro">Usar el centro del mapa</button></div>
+<p class="small-note" id="mapa-ubicacion-estado" role="status">Aún no marcaste ninguna zona.</p>
+<button class="button button-primary" type="submit">Enviar reporte</button>
+<p id="mapa-mensaje" role="status"></p>
+</form>
+</div>
+<ul class="map-legend"><li><span style="background:#ee8468"></span>Pendiente de atender</li><li><span style="background:#2f8f6b"></span>Ya atendido</li></ul>
+</div>
+</section>
+
+<section class="history-section section-pad" id="historial">
       <div class="container">
         <div class="section-heading section-heading-inline">
           <div><div class="eyebrow">CADA REVISIÓN CUENTA</div><h2>Mi historial</h2><p>Consulta las revisiones que guardaste en este dispositivo.</p></div>
