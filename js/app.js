@@ -3,6 +3,7 @@
 (() => {
   const DRAFT_KEY = 'denguecero-draft-v1';
   const HISTORY_KEY = 'denguecero-history-v1';
+  const BRIGADE_KEY = 'denguecero-brigada-check-v1';
   const MAX_HISTORY = 30;
 
   const zones = [
@@ -176,6 +177,33 @@ const quizBank = [
     const pendingActions = risks - actionsDone;
     return { total: totalItems, reviewed, notReviewed: totalItems - reviewed, risks, actionsDone, pendingActions, percent: Math.round((reviewed / totalItems) * 100) };
   }
+  // Selecciona siguientes pasos a partir de lo que el usuario registró.
+  // El orden es práctico para organizar tareas, no una escala sanitaria oficial de riesgo.
+  const ACTION_ORDER = ['tank-cover', 'yard-puddles', 'tank-clean', 'unused-buckets', 'bottles-cans', 'tires-toys', 'bath-containers', 'drain-trays', 'fridge-tray', 'vases', 'plant-saucers', 'water-plants', 'pet-bowls', 'pet-toys', 'small-containers'];
+  function getNextSteps(snapshot) {
+    const answerMap = normalizeAnswers(snapshot.answers);
+    const actionItems = allItems
+      .filter(item => answerMap[item.id].status === 'risk' && !answerMap[item.id].actionDone)
+      .sort((a, b) => ACTION_ORDER.indexOf(a.id) - ACTION_ORDER.indexOf(b.id))
+      .map(item => ({ kind: 'action', item, title: item.title, detail: item.action, note: 'Marcaste un posible criadero y la acción sigue pendiente.' }));
+    const reviewItems = allItems
+      .filter(item => answerMap[item.id].status === 'pending')
+      .map(item => ({ kind: 'review', item, title: item.title, detail: item.description, note: 'Este punto todavía no está revisado. Compruébalo solo si puedes hacerlo con seguridad.' }));
+    return [...actionItems, ...reviewItems].slice(0, 3);
+  }
+  function renderPriorityPanel(snapshot) {
+    const panel = $('#result-priority');
+    const steps = getNextSteps(snapshot);
+    panel.hidden = false;
+    if (!steps.length) {
+      panel.innerHTML = `<div class="priority-heading"><span class="brigade-kicker">SIGUIENTE PASO</span><h4 id="result-priority-title">Mantén la rutina preventiva</h4><p>No quedan acciones pendientes ni puntos sin revisar en este registro. Repite la inspección periódicamente; el resultado no certifica que la vivienda esté libre de mosquitos.</p></div>`;
+      return;
+    }
+    const actionCount = steps.filter(step => step.kind === 'action').length;
+    const heading = actionCount ? 'Empieza por estas acciones' : 'Completa los puntos que faltan';
+    const description = 'Orden sugerido para organizarte según tus respuestas. No representa una clasificación oficial del riesgo sanitario.';
+    panel.innerHTML = `<div class="priority-heading"><span class="brigade-kicker">TUS SIGUIENTES PASOS</span><h4 id="result-priority-title">${heading}</h4><p>${description}</p></div><ol class="priority-list">${steps.map((step, index) => `<li><span class="priority-number">${index + 1}</span><div><strong>${escapeHTML(step.title)}</strong><p>${escapeHTML(step.detail)}</p><small>${escapeHTML(step.note)}</small></div></li>`).join('')}</ol>`;
+  }
   function saveDraft() { safeSet(DRAFT_KEY, JSON.stringify(answers)); }
   function showToast(message) {
     toastEl.textContent = message;
@@ -255,6 +283,7 @@ const quizBank = [
     }
     $('#result-message').textContent = message;
     $('#result-message').classList.toggle('warning', stats.pendingActions > 0 || partial);
+    renderPriorityPanel(snapshot);
     renderPrintReport(snapshot);
     if (scroll) resultPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
@@ -269,7 +298,9 @@ const quizBank = [
       }).join('');
       return `<div class="print-zone"><h2>${escapeHTML(zone.name)}</h2><ul>${li}</ul></div>`;
     }).join('');
-    $('#print-content').innerHTML = `<h1>DengueCero — Resumen de inspección</h1><p><strong>Fecha:</strong> ${escapeHTML(formatDateTime(snapshot.createdAt))}</p><p>Este resumen refleja las respuestas introducidas por el usuario. No es una certificación sanitaria ni un diagnóstico.</p><div class="print-summary"><div class="print-metric"><strong>${stats.percent}%</strong>Lista revisada</div><div class="print-metric"><strong>${stats.risks}</strong>Posibles criaderos</div><div class="print-metric"><strong>${stats.actionsDone}</strong>Acciones realizadas*</div><div class="print-metric"><strong>${stats.notReviewed}</strong>Sin revisar</div></div><p>* Acciones marcadas como realizadas por el usuario.</p>${sections}<hr><p>Fuente de recomendaciones: Ministerio de Salud del Perú, campaña de prevención del dengue: https://www.gob.pe/institucion/minsa/campañas/8255-campana-de-prevencion-contra-el-dengue</p>`;
+    const nextSteps = getNextSteps(snapshot);
+    const nextStepsHtml = nextSteps.length ? `<div class="print-zone"><h2>Siguientes pasos sugeridos</h2><ol>${nextSteps.map(step => `<li><strong>${escapeHTML(step.title)}:</strong> ${escapeHTML(step.detail)} <em>${escapeHTML(step.note)}</em></li>`).join('')}</ol><p>El orden es una ayuda práctica, no una clasificación oficial del riesgo sanitario.</p></div>` : '';
+    $('#print-content').innerHTML = `<h1>DengueCero — Resumen de inspección</h1><p><strong>Fecha:</strong> ${escapeHTML(formatDateTime(snapshot.createdAt))}</p><p>Este resumen refleja las respuestas introducidas por el usuario. No es una certificación sanitaria ni un diagnóstico.</p><div class="print-summary"><div class="print-metric"><strong>${stats.percent}%</strong>Lista revisada</div><div class="print-metric"><strong>${stats.risks}</strong>Posibles criaderos</div><div class="print-metric"><strong>${stats.actionsDone}</strong>Acciones realizadas*</div><div class="print-metric"><strong>${stats.notReviewed}</strong>Sin revisar</div></div><p>* Acciones marcadas como realizadas por el usuario.</p>${nextStepsHtml}${sections}<hr><p>Fuente de recomendaciones: Ministerio de Salud del Perú, campaña de prevención del dengue: https://www.gob.pe/institucion/minsa/campanas/8255-campana-de-prevencion-contra-el-dengue</p>`;
   }
   function saveInspection() {
     const stats = statsFor(answers);
@@ -448,12 +479,72 @@ const quizBank = [
     }
   });
 
+  // Modo Brigada Escolar: lista local, guion copiable y guía imprimible.
+  const BRIGADE_CHECKS = ['source', 'examples', 'roles', 'safety'];
+  let brigadeState = parseJSON(safeGet(BRIGADE_KEY), {});
+  if (!brigadeState || typeof brigadeState !== 'object' || Array.isArray(brigadeState)) brigadeState = {};
+  function renderBrigadeChecklist() {
+    const checkboxes = document.querySelectorAll('[data-brigade-check]');
+    let completed = 0;
+    checkboxes.forEach(input => {
+      input.checked = brigadeState[input.dataset.brigadeCheck] === true;
+      if (input.checked) completed += 1;
+    });
+    $('#brigade-progress').textContent = `${completed} de ${BRIGADE_CHECKS.length} pasos listos`;
+  }
+  $('#brigade-checklist').addEventListener('change', event => {
+    const input = event.target.closest('[data-brigade-check]');
+    if (!input) return;
+    brigadeState[input.dataset.brigadeCheck] = input.checked;
+    safeSet(BRIGADE_KEY, JSON.stringify(brigadeState));
+    renderBrigadeChecklist();
+  });
+  $('#brigade-reset').addEventListener('click', () => {
+    brigadeState = {};
+    safeRemove(BRIGADE_KEY);
+    renderBrigadeChecklist();
+    showToast('Lista de preparación reiniciada.');
+  });
+  async function copyText(text) {
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(text);
+      } else {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.setAttribute('readonly', '');
+        textarea.style.position = 'fixed'; textarea.style.opacity = '0';
+        document.body.appendChild(textarea); textarea.select();
+        const copied = document.execCommand('copy');
+        textarea.remove();
+        if (!copied) throw new Error('No se pudo copiar automáticamente');
+      }
+      showToast('Guion copiado. Ya puedes pegarlo en tu presentación.');
+    } catch {
+      showToast('No se pudo copiar automáticamente. Selecciona el guion y cópialo manualmente.');
+    }
+  }
+  $('#copy-brigade-script').addEventListener('click', () => copyText($('#brigade-script').textContent.trim()));
+  $('#print-brigade-guide').addEventListener('click', () => {
+    const script = $('#brigade-script').textContent.trim();
+    const checklist = [
+      'Revisé las recomendaciones oficiales del Minsa.',
+      'Preparé ejemplos o imágenes sin datos personales.',
+      'Repartí los roles: exposición, tiempo y resumen.',
+      'Evitaré riesgos, manipular residuos peligrosos o subir a techos.'
+    ];
+    $('#print-content').innerHTML = `<h1>DengueCero — Guía para Brigada Escolar</h1><p><strong>Objetivo:</strong> practicar cómo identificar posibles criaderos y compartir medidas preventivas de forma segura.</p><h2>Guion de apertura</h2><p>${escapeHTML(script)}</p><h2>Actividad de 10 minutos</h2><ol><li><strong>0–2 min · Explica:</strong> un recipiente con agua acumulada puede convertirse en criadero.</li><li><strong>2–6 min · Demuestra:</strong> usa la lista DengueCero y analiza ejemplos o imágenes; no manipules objetos peligrosos.</li><li><strong>6–8 min · Propón:</strong> identifica una medida concreta, como vaciar, limpiar o tapar, según el caso.</li><li><strong>8–10 min · Comprométete:</strong> cada estudiante elige cuándo revisar el hogar con ayuda de su familia.</li></ol><h2>Lista de preparación</h2><ul>${checklist.map(item => `<li>${escapeHTML(item)}</li>`).join('')}</ul><h2>Principios de seguridad</h2><ul><li>No subas a techos ni uses escaleras inestables.</li><li>No publiques direcciones ni fotografías personales sin consentimiento.</li><li>No presentes reportes de criaderos como casos confirmados de dengue.</li><li>Consulta las recomendaciones vigentes del Minsa: https://www.gob.pe/institucion/minsa/campa%C3%B1as/8255-campana-de-prevencion-contra-el-dengue</li></ul><hr><p>Material educativo independiente. No reemplaza las indicaciones de las autoridades sanitarias.</p>`;
+    window.print();
+  });
+
   // Reto educativo: cinco preguntas aleatorias de un banco de 50, con explicación inmediata.
   let quizIndex = 0;
   let quizScore = 0;
   let quizAnswered = false;
   let quizFinished = false;
+  let quizWrongAnswers = [];
   const quizOptions = $('#quiz-options');
+  const quizReview = $('#quiz-review');
   function shuffleQuizItems(items) {
     const shuffled = [...items];
     for (let i = shuffled.length - 1; i > 0; i -= 1) {
@@ -476,19 +567,27 @@ const quizBank = [
     quizScore = 0;
     quizAnswered = false;
     quizFinished = false;
+    quizWrongAnswers = [];
+    quizReview.hidden = true;
+    quizReview.innerHTML = '';
     renderQuiz();
   }
   function renderQuiz() {
     const nextButton = $('#quiz-next');
     const feedback = $('#quiz-feedback');
     feedback.hidden = true; feedback.classList.remove('wrong');
+    quizReview.hidden = true;
     if (quizFinished) {
       $('#quiz-step').textContent = 'RETO COMPLETADO';
       $('#quiz-score-label').textContent = `${quizScore} de ${quizQuestions.length} correctas`;
       $('#quiz-question').textContent = '¡Gracias por aprender y compartir información confiable!';
       quizOptions.hidden = true;
       feedback.hidden = false;
-      feedback.textContent = quizScore === quizQuestions.length ? '¡Excelente! Respondiste todo correctamente. Mantén estos hábitos y consulta fuentes oficiales.' : `Obtuviste ${quizScore} de ${quizQuestions.length}. Revisa las explicaciones y vuelve a intentarlo para reforzar lo aprendido.`;
+      feedback.textContent = quizScore === quizQuestions.length ? '¡Excelente! Respondiste todo correctamente. Mantén estos hábitos y consulta fuentes oficiales.' : `Obtuviste ${quizScore} de ${quizQuestions.length}. Revisa tus errores debajo y vuelve a intentarlo para reforzar lo aprendido.`;
+      quizReview.hidden = false;
+      quizReview.innerHTML = quizWrongAnswers.length
+        ? `<h4 id="quiz-review-title">Repasa tus respuestas incorrectas</h4><p class="quiz-review-intro">Estas son las afirmaciones que conviene repasar antes de la siguiente ronda.</p><div class="quiz-review-list">${quizWrongAnswers.map((entry, index) => `<article class="quiz-review-item"><span class="quiz-review-number">${index + 1}</span><div><strong>${escapeHTML(entry.question)}</strong><p><span class="review-label">Tu respuesta:</span> ${entry.selected ? 'Verdadero' : 'Falso'} · <span class="review-label">Respuesta correcta:</span> ${entry.correct ? 'Verdadero' : 'Falso'}</p><small>${escapeHTML(entry.explanation)}</small></div></article>`).join('')}</div>`
+        : `<h4 id="quiz-review-title">¡No hay errores que repasar!</h4><p class="quiz-review-intro">Respondiste las cinco preguntas correctamente. Reinicia para practicar con otras preguntas del banco.</p>`;
       nextButton.hidden = true;
       return;
     }
@@ -514,6 +613,7 @@ const quizBank = [
     const choice = button.dataset.answer === 'true';
     quizAnswered = true;
     if (choice === question.correct) quizScore += 1;
+    else quizWrongAnswers.push({ question: question.question, selected: choice, correct: question.correct, explanation: question.explanation });
     quizOptions.querySelectorAll('button').forEach(option => {
       option.disabled = true;
       if ((option.dataset.answer === 'true') === question.correct) option.classList.add('chosen-correct');
@@ -535,5 +635,6 @@ const quizBank = [
   history = loadHistory();
   renderInspection();
   renderHistory();
+  renderBrigadeChecklist();
   startQuizRound();
 })();

@@ -53,3 +53,11 @@ Creemos que la prevención también comienza con acciones cotidianas. DengueCero
 ## Nota sanitaria
 
 La web es educativa, no diagnostica ni certifica viviendas libres de mosquitos. Ante señales de alarma del dengue, se debe buscar atención médica inmediata. Consulta siempre las recomendaciones vigentes del Minsa.
+
+## Funciones nuevas
+
+- **Siguientes pasos personalizados:** después de abrir el resultado, muestra hasta tres acciones pendientes y/o puntos sin revisar según los datos introducidos. El orden es una ayuda práctica, no una escala oficial de riesgo.
+- **Modo Brigada Escolar:** guion para iniciar una actividad, agenda de 10 minutos, lista de preparación con guardado local y botón para imprimir la guía.
+- **Repaso del cuestionario:** al acabar una ronda aparecen las respuestas incorrectas, la respuesta correcta y su explicación.
+
+En la demostración, prueba una inspección con uno o dos posibles criaderos sin marcar la acción como realizada para enseñar el bloque de siguientes pasos. Luego completa el reto educativo y muestra cómo aparecen los errores para repasar.

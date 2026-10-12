@@ -21,7 +21,9 @@ La web es estática. Puedes publicar la carpeta en GitHub Pages, Netlify, Cloudf
 - Recomendaciones específicas y registro local de acciones declaradas como realizadas.
 - Progreso, resultados, historial e informe imprimible/guardable en PDF.
 - Compartir resumen y descargar un recordatorio de calendario (`.ics`).
-- Información educativa, señales de alarma y reto de mitos y verdades con banco de 50 preguntas; cada ronda selecciona cinco al azar y muestra una explicación por respuesta.
+- Información educativa, señales de alarma y reto de mitos y verdades con banco de 50 preguntas; cada ronda selecciona cinco al azar, muestra explicaciones y permite repasar errores al finalizar.
+- Siguientes pasos personalizados tras la inspección, priorizando acciones pendientes y puntos sin revisar a partir de las respuestas declaradas. El orden es orientativo y no una puntuación sanitaria oficial.
+- Modo Brigada Escolar: guion breve, agenda de actividad de 10 minutos, lista de preparación guardada localmente y guía imprimible.
 - Diseño adaptable, navegación por teclado y soporte para preferencia de movimiento reducido.
 
 ## Límites

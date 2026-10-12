@@ -23,6 +23,7 @@
         <a href="#como-funciona">Cómo funciona</a>
         <a href="#inspeccion">Revisa tu casa</a>
         <a href="#historial">Mi historial</a>
+        <a href="#brigada">Brigada escolar</a>
         <a href="#aprende">Aprende</a>
         <a class="nav-cta" href="#inspeccion">Empezar revisión <span aria-hidden="true">↗</span></a>
       </nav>
@@ -123,6 +124,7 @@
           <div class="result-heading"><div><div class="eyebrow">RESUMEN DE TU REVISIÓN</div><h3 id="result-title">Tu resultado preventivo</h3><p id="result-date"></p></div><span class="result-icon" aria-hidden="true">✓</span></div>
           <div class="result-stats" id="result-stats"></div>
           <div class="result-message" id="result-message"></div>
+          <section class="result-priority-panel" id="result-priority" aria-labelledby="result-priority-title" hidden></section>
           <div class="result-actions"><button class="button button-primary" id="print-report" type="button">Imprimir / guardar PDF</button><button class="button button-secondary" id="share-report" type="button">Compartir resumen</button><button class="button button-quiet" id="new-inspection" type="button">Nueva revisión</button></div>
           <p class="small-note">Este resumen refleja únicamente tus respuestas. No certifica que la vivienda esté libre de mosquitos.</p>
         </section>
@@ -139,6 +141,47 @@
           <div class="history-list-wrap"><div class="history-list" id="history-list"></div><div class="history-empty" id="history-empty"><div class="empty-icon">▤</div><h3>Tu historial empieza aquí</h3><p>Cuando guardes tu primera revisión, podrás consultar sus resultados en esta sección.</p><a class="text-link" href="#inspeccion">Comenzar mi primera revisión →</a></div></div>
           <aside class="reminder-card"><div class="reminder-top"><span class="reminder-icon">◷</span><span class="reminder-tag">HÁBITO PREVENTIVO</span></div><h3>Que no se te pase volver a revisar.</h3><p>La prevención funciona mejor cuando se convierte en una rutina. Te sugerimos repetir el recorrido dentro de una semana.</p><div class="reminder-date"><span>Próxima revisión sugerida</span><strong id="next-review-date">Guarda tu primera revisión</strong></div><button class="button button-dark button-full" id="calendar-reminder" type="button" disabled>Añadir al calendario</button><p class="tiny-note">Es un recordatorio orientativo, no una notificación automática.</p></aside>
         </div>
+      </div>
+    </section>
+
+    <section class="brigade-section section-pad" id="brigada">
+      <div class="container">
+        <div class="section-heading section-heading-inline brigade-section-heading">
+          <div><div class="eyebrow">PREVENCIÓN QUE SE COMPARTE</div><h2>Modo Brigada Escolar</h2><p>Una actividad de diez minutos para que estudiantes y docentes conviertan la información en una acción concreta y segura.</p></div>
+          <button class="button button-dark" id="print-brigade-guide" type="button">Imprimir guía práctica <span aria-hidden="true">↗</span></button>
+        </div>
+        <div class="brigade-grid">
+          <article class="brigade-card brigade-script-card">
+            <div class="brigade-card-icon" aria-hidden="true">“</div>
+            <span class="brigade-kicker">GUION BREVE</span>
+            <h3>¿Cómo iniciar la actividad?</h3>
+            <p class="brigade-script" id="brigade-script">Hoy vamos a dedicar diez minutos a identificar objetos que pueden acumular agua y aprender qué hacer con ellos. No estamos diagnosticando enfermedades: estamos practicando medidas preventivas que podemos aplicar en casa y compartir con nuestra familia.</p>
+            <button class="button button-quiet" id="copy-brigade-script" type="button">Copiar guion</button>
+          </article>
+          <article class="brigade-card brigade-agenda-card">
+            <span class="brigade-kicker">ACTIVIDAD DE 10 MINUTOS</span>
+            <h3>Una sesión breve y participativa</h3>
+            <ol class="brigade-agenda">
+              <li><span class="agenda-time">0–2 min</span><div><strong>Explica el objetivo</strong><p>Un recipiente con agua acumulada puede convertirse en criadero.</p></div></li>
+              <li><span class="agenda-time">2–6 min</span><div><strong>Haz una inspección demostrativa</strong><p>Usa la lista de DengueCero y analiza ejemplos o imágenes, sin tocar objetos peligrosos.</p></div></li>
+              <li><span class="agenda-time">6–8 min</span><div><strong>Propón una acción</strong><p>El grupo identifica una medida concreta: vaciar, limpiar o tapar, según el caso.</p></div></li>
+              <li><span class="agenda-time">8–10 min</span><div><strong>Cierra con un compromiso</strong><p>Cada estudiante elige cuándo revisar su hogar con ayuda de su familia.</p></div></li>
+            </ol>
+          </article>
+          <article class="brigade-card brigade-check-card">
+            <span class="brigade-kicker">LISTA DE PREPARACIÓN</span>
+            <h3>Antes de empezar</h3>
+            <p>Marca lo que ya preparaste. El progreso se guarda en este navegador.</p>
+            <div class="brigade-checklist" id="brigade-checklist">
+              <label><input type="checkbox" data-brigade-check="source"> Revisé las recomendaciones oficiales del Minsa.</label>
+              <label><input type="checkbox" data-brigade-check="examples"> Preparé ejemplos o imágenes sin datos personales.</label>
+              <label><input type="checkbox" data-brigade-check="roles"> Repartí los roles: exposición, tiempo y resumen.</label>
+              <label><input type="checkbox" data-brigade-check="safety"> Evitaré riesgos, manipular residuos peligrosos o subir a techos.</label>
+            </div>
+            <div class="brigade-check-footer"><span id="brigade-progress" role="status">0 de 4 pasos listos</span><button class="text-button" id="brigade-reset" type="button">Reiniciar lista</button></div>
+          </article>
+        </div>
+        <div class="brigade-note"><span aria-hidden="true">i</span><p><strong>Para una campaña responsable:</strong> no publiques direcciones de familias, fotografías de personas sin permiso ni supuestos casos de dengue. La brigada es educativa; los hallazgos que requieran atención deben comunicarse por los canales correspondientes de la comunidad o autoridad sanitaria.</p></div>
       </div>
     </section>
 
@@ -159,6 +202,7 @@
             <h3 id="quiz-question">El zancudo que transmite el dengue puede reproducirse en recipientes con agua acumulada.</h3>
             <div class="quiz-options" id="quiz-options"><button type="button" data-answer="true">Verdadero</button><button type="button" data-answer="false">Falso</button></div>
             <div class="quiz-feedback" id="quiz-feedback" role="status" hidden></div>
+            <section class="quiz-review" id="quiz-review" aria-labelledby="quiz-review-title" hidden></section>
             <div class="quiz-controls"><button class="button button-quiet" id="quiz-restart" type="button">Reiniciar · otras 5</button><button class="button button-primary" id="quiz-next" type="button" disabled>Siguiente pregunta →</button></div>
           </div>
         </div>
