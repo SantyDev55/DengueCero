@@ -1,0 +1,7 @@
+// Copia estos valores a js/mapa-config.js para activar los reportes compartidos.
+// Usa únicamente la URL del proyecto y la clave pública anon/publishable.
+// NUNCA pongas aquí la clave service_role ni secretos privados.
+window.DENGUE_MAPA = {
+  url: 'https://TU-PROYECTO.supabase.co',
+  key: 'TU_CLAVE_PUBLICA_ANON_O_PUBLISHABLE'
+};
